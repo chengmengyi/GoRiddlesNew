@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="data"
+            type="game.riddles.question.view.GetCoinsResultData" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_view_tips_dialog"
+        android:orientation="vertical"
+        tools:layout_marginLeft="30dp"
+        tools:layout_marginRight="30dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:onClick="@{data::onCloseGetCoinsResultDialog}"
+            app:srcCompat="@mipmap/ic_close_tips"
+            tools:ignore="RtlHardcoded" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Congratulations!"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:typeface="sans"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="22dp"
+            android:gravity="center_horizontal"
+            android:text="@{`You received ` + data.rewardedCoin + ` coins. Enjoy!`}"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage"
+            tools:text="You received 60 coins. Enjoy!" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginRight="30dp"
+            android:background="@mipmap/bg_btn_get_coin_ad"
+            android:gravity="center"
+            android:onClick="@{data::onCloseGetCoinsResultDialog}"
+            android:text="Continue"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:typeface="sans"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,26 @@
+{
+  "enterid_open": [
+    {
+      "from": "admob",
+      "data_id": "ca-app-pub-3940256099942544/3419835294",
+      "type": "o",
+      "index": 1
+    }
+  ],
+  "enterid_time": [
+    {
+      "from": "admob",
+      "data_id": "ca-app-pub-3940256099942544/1033173712",
+      "type": "i",
+      "index": 1
+    }
+  ],
+  "enterid_reward": [
+    {
+      "from": "admob",
+      "data_id": "ca-app-pub-3940256099942544/5354046379",
+      "type": "r",
+      "index": 1
+    }
+  ]
+}

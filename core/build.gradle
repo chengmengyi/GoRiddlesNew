@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk rootProject.ext.android.compileSdk
+
+    defaultConfig {
+        minSdk rootProject.ext.android.minSdk
+        targetSdk rootProject.ext.android.targetSdk
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    api rootProject.ext.dependencies.coreKtx
+    api rootProject.ext.dependencies.fragmentKtx
+    api rootProject.ext.dependencies.lifeCycleKtx
+    api rootProject.ext.dependencies.liveDataKtx
+    api rootProject.ext.dependencies.viewModelKtx
+    api rootProject.ext.dependencies.appcompat
+    api rootProject.ext.dependencies.material
+    api rootProject.ext.dependencies.constraintlayout
+    api rootProject.ext.dependencies.coroutines
+    api rootProject.ext.dependencies.androidUtilCode
+    api rootProject.ext.dependencies.xpopup
+    implementation rootProject.ext.dependencies.moshi
+    kapt rootProject.ext.dependencies.moshiCodegen
+    implementation platform(rootProject.ext.dependencies.firebaseBom)
+    implementation rootProject.ext.dependencies.firebaseConfigKtx
+    implementation rootProject.ext.dependencies.okhttp3
+    implementation rootProject.ext.dependencies.retrofit2
+    implementation rootProject.ext.dependencies.retrofit2GsonConverter
+    implementation rootProject.ext.dependencies.referrer
+    implementation rootProject.ext.dependencies.admobAd
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="game.riddles.SplashData" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_splash"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="148dp"
+            android:layout_height="78dp"
+            android:layout_marginTop="236dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/logo_splash" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="88.46dp"
+            android:layout_height="12.78dp"
+            android:layout_marginTop="22dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/title_splash" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="206dp"
+            android:layout_height="6dp"
+            android:layout_marginTop="213dp"
+            android:progress="@{data.progress}"
+            android:progressDrawable="@drawable/progress_splash"
+            tools:progress="50" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

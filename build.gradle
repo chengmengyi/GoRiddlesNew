@@ -1,0 +1,20 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    apply from: "config.gradle"
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+        gradlePluginPortal()
+    }
+    dependencies {
+        classpath rootProject.ext.build.gradleTool
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
+        classpath("org.mozilla.rust-android-gradle:plugin:0.9.0")
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

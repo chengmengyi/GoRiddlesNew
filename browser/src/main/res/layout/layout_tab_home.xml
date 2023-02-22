@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_browser"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_back"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            app:srcCompat="@mipmap/ic_browser_back" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/capture_rect_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="100dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="3dp"
+            app:srcCompat="@mipmap/ic_browser_logo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_start_search"
+            android:layout_width="290dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="33dp"
+            android:background="@mipmap/bg_search_et"
+            android:drawablePadding="12dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="Search or type a web address"
+            android:textColor="#C2C2C2"
+            android:textSize="14dp"
+            android:typeface="sans"
+            app:drawableLeftCompat="@mipmap/ic_search_text"
+            app:drawableRightCompat="@mipmap/ic_clear_text"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="41dp"
+            android:layout_marginRight="30dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_google"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="7.5dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="Google"
+                android:textColor="#848C95"
+                android:textSize="12dp"
+                android:typeface="sans"
+                app:drawableTopCompat="@mipmap/search_google"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_edge"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="7.5dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="Microsoft Edge"
+                android:textColor="#848C95"
+                android:textSize="12dp"
+                android:typeface="sans"
+                app:drawableTopCompat="@mipmap/edge"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_firefox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="7.5dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="Firefox"
+                android:textColor="#848C95"
+                android:textSize="12dp"
+                android:typeface="sans"
+                app:drawableTopCompat="@mipmap/firefox"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_opera"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="7.5dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="Opera"
+                android:textColor="#848C95"
+                android:textSize="12dp"
+                android:typeface="sans"
+                app:drawableTopCompat="@mipmap/opera"
+                tools:ignore="HardcodedText,SpUsage" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

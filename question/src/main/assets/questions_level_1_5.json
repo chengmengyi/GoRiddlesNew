@@ -1,0 +1,1984 @@
+{
+  "list": [
+    {
+      "ask": "What is easy to get into, but hard to get out of?",
+      "explanation": "It's much easier to get into of trouble than out of one",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Trouble"
+        },
+        {
+          "isAnswer": false,
+          "text": "Rabbit"
+        },
+        {
+          "isAnswer": false,
+          "text": "Rocket Ship"
+        },
+        {
+          "isAnswer": false,
+          "text": "Envelope"
+        }
+      ]
+    },
+    {
+      "ask": "I’m tall when I’m young and I’m short when I’m old. What am I?",
+      "explanation": "Candles grow shorter as they burn",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Candle"
+        },
+        {
+          "isAnswer": false,
+          "text": "Earth"
+        },
+        {
+          "isAnswer": false,
+          "text": "Babies"
+        },
+        {
+          "isAnswer": false,
+          "text": "Lion"
+        }
+      ]
+    },
+    {
+      "ask": "What has hands but can not clap?",
+      "explanation": "Clocks usually have a long and short hand to tell time",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Clock"
+        },
+        {
+          "isAnswer": false,
+          "text": "Ants"
+        },
+        {
+          "isAnswer": false,
+          "text": "Fly"
+        },
+        {
+          "isAnswer": false,
+          "text": "Plants"
+        }
+      ]
+    },
+    {
+      "ask": "What is at the end of a rainbow?",
+      "explanation": "The last alphabet of 'rainbow' is 'w'",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "W"
+        },
+        {
+          "isAnswer": false,
+          "text": "Silver"
+        },
+        {
+          "isAnswer": false,
+          "text": "O"
+        },
+        {
+          "isAnswer": false,
+          "text": "Red"
+        }
+      ]
+    },
+    {
+      "ask": "What starts with the letter “t”, is filled with “t” and ends in “t”?",
+      "explanation": "A teapot contains 't' (read: tea)",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Teapot"
+        },
+        {
+          "isAnswer": false,
+          "text": "Cat"
+        },
+        {
+          "isAnswer": false,
+          "text": "Tape"
+        },
+        {
+          "isAnswer": false,
+          "text": "Tarzan"
+        }
+      ]
+    },
+    {
+      "ask": "Which weighs more - a kilo of feathers or a kilo of bricks?",
+      "explanation": "They're equal - a kilo is always a kilo, no matter what you're carrying",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Neither"
+        },
+        {
+          "isAnswer": false,
+          "text": "Feathers"
+        },
+        {
+          "isAnswer": false,
+          "text": "Bricks"
+        },
+        {
+          "isAnswer": false,
+          "text": "Don't know"
+        }
+      ]
+    },
+    {
+      "ask": "How many months have 28 days?",
+      "explanation": "All months have 28 days, it's just that some have more! ;)",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "All months"
+        },
+        {
+          "isAnswer": false,
+          "text": "1"
+        },
+        {
+          "isAnswer": false,
+          "text": "2"
+        },
+        {
+          "isAnswer": false,
+          "text": "5"
+        }
+      ]
+    },
+    {
+      "ask": "What’s full of holes but still holds water?",
+      "explanation": "A sponge soaks up water and holds it",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Sponge"
+        },
+        {
+          "isAnswer": false,
+          "text": "Bucket"
+        },
+        {
+          "isAnswer": false,
+          "text": "Teacup"
+        },
+        {
+          "isAnswer": false,
+          "text": "Plate"
+        }
+      ]
+    },
+    {
+      "ask": "I am an odd number. Take away one letter and I become even. What number am I?",
+      "explanation": "Remove the 'S' and it becomes 'even'",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Seven"
+        },
+        {
+          "isAnswer": false,
+          "text": "Twelve"
+        },
+        {
+          "isAnswer": false,
+          "text": "Nine"
+        },
+        {
+          "isAnswer": false,
+          "text": "One"
+        }
+      ]
+    },
+    {
+      "ask": "What never asks questions but is often answered?",
+      "explanation": "A doorbell is always answered (unless no one's home)",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Doorbell"
+        },
+        {
+          "isAnswer": false,
+          "text": "Fire"
+        },
+        {
+          "isAnswer": false,
+          "text": "Principal"
+        },
+        {
+          "isAnswer": false,
+          "text": "The Pope"
+        }
+      ]
+    },
+    {
+      "ask": "I have many keys but I cannot open a single lock. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Keyboard"
+        },
+        {
+          "isAnswer": false,
+          "text": "Lock"
+        },
+        {
+          "isAnswer": false,
+          "text": "Door"
+        },
+        {
+          "isAnswer": false,
+          "text": "Book"
+        }
+      ]
+    },
+    {
+      "ask": "I am always late and never present now. What am I?",
+      "explanation": "'Later' never happens now",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Later"
+        },
+        {
+          "isAnswer": false,
+          "text": "Today"
+        },
+        {
+          "isAnswer": false,
+          "text": "Time"
+        },
+        {
+          "isAnswer": false,
+          "text": "Student"
+        }
+      ]
+    },
+    {
+      "ask": "What is the only word that is spelled wrong in the dictionary?",
+      "explanation": "Only word is spelt 'wrong'",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Wrong"
+        },
+        {
+          "isAnswer": false,
+          "text": "Dictionary"
+        },
+        {
+          "isAnswer": false,
+          "text": "Money"
+        },
+        {
+          "isAnswer": false,
+          "text": "Special"
+        }
+      ]
+    },
+    {
+      "ask": "What can you easily break but never touch?",
+      "explanation": "Promises are easily broken even if you can't touch them",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Promise"
+        },
+        {
+          "isAnswer": false,
+          "text": "Glasses"
+        },
+        {
+          "isAnswer": false,
+          "text": "Mirror"
+        },
+        {
+          "isAnswer": false,
+          "text": "Sun"
+        }
+      ]
+    },
+    {
+      "ask": "I am first on earth, second in heaven. I appear twice in a week, never in a month, but once in a year. What am I?",
+      "explanation": "(E)arth, h(E)aven, w(EE)k, month, y(E)ar",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Letter 'E'"
+        },
+        {
+          "isAnswer": false,
+          "text": "Gates"
+        },
+        {
+          "isAnswer": false,
+          "text": "February"
+        },
+        {
+          "isAnswer": false,
+          "text": "God"
+        }
+      ]
+    },
+    {
+      "ask": "What do Henry the Eighth and Kermit the Frog have in common?",
+      "explanation": "They share the word 'the'",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Middle Name"
+        },
+        {
+          "isAnswer": false,
+          "text": "Flies"
+        },
+        {
+          "isAnswer": false,
+          "text": "Frogs"
+        },
+        {
+          "isAnswer": false,
+          "text": "Kings"
+        }
+      ]
+    },
+    {
+      "ask": "What side of a cat has the most fur?",
+      "explanation": "Outside has all the fur",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Outside"
+        },
+        {
+          "isAnswer": false,
+          "text": "Left Side"
+        },
+        {
+          "isAnswer": false,
+          "text": "Right Side"
+        },
+        {
+          "isAnswer": false,
+          "text": "Top side"
+        }
+      ]
+    },
+    {
+      "ask": "What three letters change a girl into a woman?",
+      "explanation": "A girl becomes a woman as she ages older",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Age"
+        },
+        {
+          "isAnswer": false,
+          "text": "ABC"
+        },
+        {
+          "isAnswer": false,
+          "text": "Son"
+        },
+        {
+          "isAnswer": false,
+          "text": "Mom"
+        }
+      ]
+    },
+    {
+      "ask": "What word when read from left to right is a ruler but when read right to left is a servant?",
+      "explanation": "Dog - Servant / God - Ruler",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Dog"
+        },
+        {
+          "isAnswer": false,
+          "text": "Bob"
+        },
+        {
+          "isAnswer": false,
+          "text": "Ron"
+        },
+        {
+          "isAnswer": false,
+          "text": "Nam"
+        }
+      ]
+    },
+    {
+      "ask": "What question can you ask where you can get different answers every time but all the answers being correct?",
+      "explanation": "The answer changes every second",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "What time is it?"
+        },
+        {
+          "isAnswer": false,
+          "text": "Who wrote Sherlock Holmes?"
+        },
+        {
+          "isAnswer": false,
+          "text": "What are you eating?"
+        },
+        {
+          "isAnswer": false,
+          "text": "How do you do?"
+        }
+      ]
+    },
+    {
+      "ask": "You use a knife to slice my head and weep beside me when I am dead. What am I?",
+      "explanation": "Most people tear up when they cut onions",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Onion"
+        },
+        {
+          "isAnswer": false,
+          "text": "Bread"
+        },
+        {
+          "isAnswer": false,
+          "text": "Nature"
+        },
+        {
+          "isAnswer": false,
+          "text": "Egg"
+        }
+      ]
+    },
+    {
+      "ask": "I am always in front of you but yet I am never here. What am I?",
+      "explanation": "The future is always coming, but never here",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "The future"
+        },
+        {
+          "isAnswer": false,
+          "text": "Friendship"
+        },
+        {
+          "isAnswer": false,
+          "text": "The past"
+        },
+        {
+          "isAnswer": false,
+          "text": "History"
+        }
+      ]
+    },
+    {
+      "ask": "What does everyone know how to open but not how to close?",
+      "explanation": "Once you crack open an egg, you can never put it back together",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "An egg"
+        },
+        {
+          "isAnswer": false,
+          "text": "Tap"
+        },
+        {
+          "isAnswer": false,
+          "text": "A Box"
+        },
+        {
+          "isAnswer": false,
+          "text": "Laptop"
+        }
+      ]
+    },
+    {
+      "ask": "What has wheels and flies but is not an aircraft?",
+      "explanation": "It has flies and other insects",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A garbage truck"
+        },
+        {
+          "isAnswer": false,
+          "text": "Trolley"
+        },
+        {
+          "isAnswer": false,
+          "text": "Car"
+        },
+        {
+          "isAnswer": false,
+          "text": "Satellite"
+        }
+      ]
+    },
+    {
+      "ask": "I start with 'e' end with 'e'. I have whole countries inside me. What am I?",
+      "explanation": "The European continent has 44 whole countries",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Europe"
+        },
+        {
+          "isAnswer": false,
+          "text": "Eye"
+        },
+        {
+          "isAnswer": false,
+          "text": "Engine"
+        },
+        {
+          "isAnswer": false,
+          "text": "Envelope"
+        }
+      ]
+    },
+    {
+      "ask": "I am in life but not in death. You can’t have fun without me. What am I?",
+      "explanation": "There's no letter 'F' in death",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "'F'"
+        },
+        {
+          "isAnswer": false,
+          "text": "Children"
+        },
+        {
+          "isAnswer": false,
+          "text": "Darkness"
+        },
+        {
+          "isAnswer": false,
+          "text": "'E'"
+        }
+      ]
+    },
+    {
+      "ask": "Sometimes I am light, sometimes I am dark. Most people love me. What am I?",
+      "explanation": "Different shades of chocolates",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Chocolate"
+        },
+        {
+          "isAnswer": false,
+          "text": "Candle"
+        },
+        {
+          "isAnswer": false,
+          "text": "Checkers"
+        },
+        {
+          "isAnswer": false,
+          "text": "Chess"
+        }
+      ]
+    },
+    {
+      "ask": "What color can you eat?",
+      "explanation": "Orange is both a color and a fruit",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Orange"
+        },
+        {
+          "isAnswer": false,
+          "text": "Carrot"
+        },
+        {
+          "isAnswer": false,
+          "text": "Red"
+        },
+        {
+          "isAnswer": false,
+          "text": "Purple"
+        }
+      ]
+    },
+    {
+      "ask": "What can fill an entire room without taking up any space?",
+      "explanation": "Light takes up no space but fills up space",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Light"
+        },
+        {
+          "isAnswer": false,
+          "text": "Balls"
+        },
+        {
+          "isAnswer": false,
+          "text": "Balloons"
+        },
+        {
+          "isAnswer": false,
+          "text": "Walls"
+        }
+      ]
+    },
+    {
+      "ask": "I never speak unless spoken to, many have heard me but none have seen me. What am I?",
+      "explanation": "The invisible voice that repeats everything you say",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "An echo"
+        },
+        {
+          "isAnswer": false,
+          "text": "TV"
+        },
+        {
+          "isAnswer": false,
+          "text": "Music"
+        },
+        {
+          "isAnswer": false,
+          "text": "Dance"
+        }
+      ]
+    },
+    {
+      "ask": "When can you add 2 to 11 and get 1 as the answer?",
+      "explanation": "2 hours after 11 is 1",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "In a clock"
+        },
+        {
+          "isAnswer": false,
+          "text": "Imaginary numbers"
+        },
+        {
+          "isAnswer": false,
+          "text": "In math"
+        },
+        {
+          "isAnswer": false,
+          "text": "Not possible"
+        }
+      ]
+    },
+    {
+      "ask": "I am the only organ in the human body that gave itself it’s own name. What am I?",
+      "explanation": "Your brain thought of it's own name",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Brain"
+        },
+        {
+          "isAnswer": false,
+          "text": "Heart"
+        },
+        {
+          "isAnswer": false,
+          "text": "Leg"
+        },
+        {
+          "isAnswer": false,
+          "text": "Liver"
+        }
+      ]
+    },
+    {
+      "ask": "Forwards it’s heavy, but backwards it’s not.",
+      "explanation": "A ton is heavy, and not is just 'not'",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Ton"
+        },
+        {
+          "isAnswer": false,
+          "text": "Bricks"
+        },
+        {
+          "isAnswer": false,
+          "text": "Racecar"
+        },
+        {
+          "isAnswer": false,
+          "text": "Cat"
+        }
+      ]
+    },
+    {
+      "ask": "Say my name and I am no more.",
+      "explanation": "Broken by uttering any word",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Silence"
+        },
+        {
+          "isAnswer": false,
+          "text": "God"
+        },
+        {
+          "isAnswer": false,
+          "text": "Devil"
+        },
+        {
+          "isAnswer": false,
+          "text": "Dog"
+        }
+      ]
+    },
+    {
+      "ask": "What can be larger than you without weighing anything?",
+      "explanation": "A shadow does not weigh anything",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Shadow"
+        },
+        {
+          "isAnswer": false,
+          "text": "Elephant"
+        },
+        {
+          "isAnswer": false,
+          "text": "Earth"
+        },
+        {
+          "isAnswer": false,
+          "text": "Mountain"
+        }
+      ]
+    },
+    {
+      "ask": "What building has the most stories?",
+      "explanation": "More books mean more stories",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Library"
+        },
+        {
+          "isAnswer": false,
+          "text": "Burj Khalifa"
+        },
+        {
+          "isAnswer": false,
+          "text": "A tall one"
+        },
+        {
+          "isAnswer": false,
+          "text": "House"
+        }
+      ]
+    },
+    {
+      "ask": "What can you hold in your right hand but never in your left hand?",
+      "explanation": "You can't hold your left hand with itself",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Your left hand"
+        },
+        {
+          "isAnswer": false,
+          "text": "Water"
+        },
+        {
+          "isAnswer": false,
+          "text": "Fire"
+        },
+        {
+          "isAnswer": false,
+          "text": "Sand"
+        }
+      ]
+    },
+    {
+      "ask": "What English word sounds the same even after you take away four of its five letters?",
+      "explanation": "The vowels in 'Queue' are useless",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Queue"
+        },
+        {
+          "isAnswer": false,
+          "text": "Donkey"
+        },
+        {
+          "isAnswer": false,
+          "text": "Icebox"
+        },
+        {
+          "isAnswer": false,
+          "text": "Mosque"
+        }
+      ]
+    },
+    {
+      "ask": "What is a kangaroo’s favorite year?",
+      "explanation": "A kangaroo moves around by leaping",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Leap year"
+        },
+        {
+          "isAnswer": false,
+          "text": "2017"
+        },
+        {
+          "isAnswer": false,
+          "text": "Last year"
+        },
+        {
+          "isAnswer": false,
+          "text": "This year"
+        }
+      ]
+    },
+    {
+      "ask": "What's in the beginning and the end, but not in the middle?",
+      "explanation": "begi(N)(N)i(N)g, e(N)d but not middle",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "'n'"
+        },
+        {
+          "isAnswer": false,
+          "text": "Donut"
+        },
+        {
+          "isAnswer": false,
+          "text": "January"
+        },
+        {
+          "isAnswer": false,
+          "text": "Time"
+        }
+      ]
+    },
+    {
+      "ask": "What has a head but never weeps, has a bed but never sleeps, can run but never walks, and has banks but no money?",
+      "explanation": "A river has a head, riverbeds, runs, and riverbanks",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "River"
+        },
+        {
+          "isAnswer": false,
+          "text": "Ahead"
+        },
+        {
+          "isAnswer": false,
+          "text": "Old man"
+        },
+        {
+          "isAnswer": false,
+          "text": "Headings"
+        }
+      ]
+    },
+    {
+      "ask": "What has four fingers and a thumb but is not alive?",
+      "explanation": "Shaped like a hand, but not alive",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Glove"
+        },
+        {
+          "isAnswer": false,
+          "text": "Monkey"
+        },
+        {
+          "isAnswer": false,
+          "text": "Air"
+        },
+        {
+          "isAnswer": false,
+          "text": "River"
+        }
+      ]
+    },
+    {
+      "ask": "What goes up and down but never moves?",
+      "explanation": "They go up and down without moving",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Stairs"
+        },
+        {
+          "isAnswer": false,
+          "text": "Elevator"
+        },
+        {
+          "isAnswer": false,
+          "text": "Eyes"
+        },
+        {
+          "isAnswer": false,
+          "text": "Pump"
+        }
+      ]
+    },
+    {
+      "ask": "Where do fish keep their money?",
+      "explanation": "Fishes live in water bodies",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "The riverbank"
+        },
+        {
+          "isAnswer": false,
+          "text": "Pockets"
+        },
+        {
+          "isAnswer": false,
+          "text": "Chest"
+        },
+        {
+          "isAnswer": false,
+          "text": "In their hands"
+        }
+      ]
+    },
+    {
+      "ask": "What has no beginning, end, or middle?",
+      "explanation": "Just like a circle!",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A donut"
+        },
+        {
+          "isAnswer": false,
+          "text": "Time"
+        },
+        {
+          "isAnswer": false,
+          "text": "Building"
+        },
+        {
+          "isAnswer": false,
+          "text": "2022"
+        }
+      ]
+    },
+    {
+      "ask": "What seven letter word has hundreds of letters in it?",
+      "explanation": "Letters, envelopes and mails!",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Mailbox"
+        },
+        {
+          "isAnswer": false,
+          "text": "Air"
+        },
+        {
+          "isAnswer": false,
+          "text": "Alphabets"
+        },
+        {
+          "isAnswer": false,
+          "text": "Postoffice"
+        }
+      ]
+    },
+    {
+      "ask": "What dress does everyone have, but no one wears?",
+      "explanation": "Can't wear an address!",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "An address"
+        },
+        {
+          "isAnswer": false,
+          "text": "Black dress"
+        },
+        {
+          "isAnswer": false,
+          "text": "Blue-Gold Dress"
+        },
+        {
+          "isAnswer": false,
+          "text": "Pants"
+        }
+      ]
+    },
+    {
+      "ask": "The more I appear The less you see. What am I?",
+      "explanation": "Can't see in the dark!",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Darkness"
+        },
+        {
+          "isAnswer": false,
+          "text": "Spectacles"
+        },
+        {
+          "isAnswer": false,
+          "text": "X-Ray"
+        },
+        {
+          "isAnswer": false,
+          "text": "Sun"
+        }
+      ]
+    },
+    {
+      "ask": "What goes up and never comes back down?",
+      "explanation": "Ever increasing, never decreasing",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Your age"
+        },
+        {
+          "isAnswer": false,
+          "text": "A ball"
+        },
+        {
+          "isAnswer": false,
+          "text": "Gravity"
+        },
+        {
+          "isAnswer": false,
+          "text": "Boomerang"
+        }
+      ]
+    },
+    {
+      "ask": "What occurs once in a minute, twice in a moment and never in one thousand years?",
+      "explanation": "(M)inute, (M)o(M)ent. Not in One Thousand Years",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "'M'"
+        },
+        {
+          "isAnswer": false,
+          "text": "Second"
+        },
+        {
+          "isAnswer": false,
+          "text": "Time"
+        },
+        {
+          "isAnswer": false,
+          "text": "Death"
+        }
+      ]
+    },
+    {
+      "ask": "What goes up when rain comes down?",
+      "explanation": "Stop you from getting wet by going up",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Umbrellas"
+        },
+        {
+          "isAnswer": false,
+          "text": "Gravity"
+        },
+        {
+          "isAnswer": false,
+          "text": "Droplets"
+        },
+        {
+          "isAnswer": false,
+          "text": "God"
+        }
+      ]
+    },
+    {
+      "ask": "What can you catch but can not throw?",
+      "explanation": "You can catch a cold, but you can't throw one",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A Cold"
+        },
+        {
+          "isAnswer": false,
+          "text": "A Baseball"
+        },
+        {
+          "isAnswer": false,
+          "text": "A Boomerang"
+        },
+        {
+          "isAnswer": false,
+          "text": "Some Music"
+        }
+      ]
+    },
+    {
+      "ask": "I travel all over the world, but always stay in my corner. What am I?",
+      "explanation": "You can't send an envelope to different parts of the world without a stamp",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A Stamp"
+        },
+        {
+          "isAnswer": false,
+          "text": "The Wall"
+        },
+        {
+          "isAnswer": false,
+          "text": "A Pancake"
+        },
+        {
+          "isAnswer": false,
+          "text": "An Apple"
+        }
+      ]
+    },
+    {
+      "ask": "What room do ghosts avoid?",
+      "explanation": "The dead can't live",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Living Room"
+        },
+        {
+          "isAnswer": false,
+          "text": "The Kitchen"
+        },
+        {
+          "isAnswer": false,
+          "text": "Storerooms"
+        },
+        {
+          "isAnswer": false,
+          "text": "Mail Room"
+        }
+      ]
+    },
+    {
+      "ask": "I am not alive, but I grow; I don't have lungs, but I need air; I don't have a mouth, but water kills me. What am I?",
+      "explanation": "Fire needs air to grow and water to die",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Fire"
+        },
+        {
+          "isAnswer": false,
+          "text": "Ice"
+        },
+        {
+          "isAnswer": false,
+          "text": "Light"
+        },
+        {
+          "isAnswer": false,
+          "text": "Man"
+        }
+      ]
+    },
+    {
+      "ask": "What has six faces, twenty one eyes but cannot see?",
+      "explanation": "Six sides with 21 dots in total",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Dice"
+        },
+        {
+          "isAnswer": false,
+          "text": "Owl"
+        },
+        {
+          "isAnswer": false,
+          "text": "Spider"
+        },
+        {
+          "isAnswer": false,
+          "text": "iPhone"
+        }
+      ]
+    },
+    {
+      "ask": "Poor people have it. Rich people need it. If you eat it you die. What is it?",
+      "explanation": "Poor people have nothing, and rich people need nothing.",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Nothing"
+        },
+        {
+          "isAnswer": false,
+          "text": "Everything"
+        },
+        {
+          "isAnswer": false,
+          "text": "Faith"
+        },
+        {
+          "isAnswer": false,
+          "text": "Money"
+        }
+      ]
+    },
+    {
+      "ask": "You go at red, but stop at green. What am I?",
+      "explanation": "You start eating a red watermelon until you reach the green skin",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A Watermelon"
+        },
+        {
+          "isAnswer": false,
+          "text": "A Signal"
+        },
+        {
+          "isAnswer": false,
+          "text": "A Car"
+        },
+        {
+          "isAnswer": false,
+          "text": "An Apple"
+        }
+      ]
+    },
+    {
+      "ask": "You are my brother, but I am not your brother. Who am I?",
+      "explanation": "Not a brother!",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Sister"
+        },
+        {
+          "isAnswer": false,
+          "text": "Father"
+        },
+        {
+          "isAnswer": false,
+          "text": "Daughter"
+        },
+        {
+          "isAnswer": false,
+          "text": "Mother"
+        }
+      ]
+    },
+    {
+      "ask": "I run all around the field but never move. What am I?",
+      "explanation": "Goes all around the field without moving",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A fence"
+        },
+        {
+          "isAnswer": false,
+          "text": "A sheep"
+        },
+        {
+          "isAnswer": false,
+          "text": "Grass"
+        },
+        {
+          "isAnswer": false,
+          "text": "A cow"
+        }
+      ]
+    },
+    {
+      "ask": "What is something that you always have but you always leave behind?",
+      "explanation": "The unique mark you leave on everything you touch!",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Fingerprints"
+        },
+        {
+          "isAnswer": false,
+          "text": "Footsteps"
+        },
+        {
+          "isAnswer": false,
+          "text": "Filters"
+        },
+        {
+          "isAnswer": false,
+          "text": "War"
+        }
+      ]
+    },
+    {
+      "ask": "Feed me and I live, yet give me a drink and I die. Who am I?",
+      "explanation": "Fire consumes most things except water",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Fire"
+        },
+        {
+          "isAnswer": false,
+          "text": "Fight"
+        },
+        {
+          "isAnswer": false,
+          "text": "Darkness"
+        },
+        {
+          "isAnswer": false,
+          "text": "Dog"
+        }
+      ]
+    },
+    {
+      "ask": "Which letter of the alphabet has the most water?",
+      "explanation": "Sea (C) has the most water",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "C"
+        },
+        {
+          "isAnswer": false,
+          "text": "X"
+        },
+        {
+          "isAnswer": false,
+          "text": "L"
+        },
+        {
+          "isAnswer": false,
+          "text": "R"
+        }
+      ]
+    },
+    {
+      "ask": "What is black and white and read all over?",
+      "explanation": "Black words on a white paper that are read all over",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Newspaper"
+        },
+        {
+          "isAnswer": false,
+          "text": "Chessboard"
+        },
+        {
+          "isAnswer": false,
+          "text": "Water"
+        },
+        {
+          "isAnswer": false,
+          "text": "Fire"
+        }
+      ]
+    },
+    {
+      "ask": "I walk with you almost every day, yet you never notice me. You step on me, but you never say sorry. What am I?",
+      "explanation": "Something you step into and step on!",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Your shoes"
+        },
+        {
+          "isAnswer": false,
+          "text": "Your dog"
+        },
+        {
+          "isAnswer": false,
+          "text": "The road"
+        },
+        {
+          "isAnswer": false,
+          "text": "The chair"
+        }
+      ]
+    },
+    {
+      "ask": "What is the center of gravity?",
+      "explanation": "gra - V - ity",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "'V'"
+        },
+        {
+          "isAnswer": false,
+          "text": "Earth"
+        },
+        {
+          "isAnswer": false,
+          "text": "Lava"
+        },
+        {
+          "isAnswer": false,
+          "text": "G"
+        }
+      ]
+    },
+    {
+      "ask": "What stays where it is when it goes off?",
+      "explanation": "Goes off every morning to wake you up, but does not move",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "An alarm clock"
+        },
+        {
+          "isAnswer": false,
+          "text": "A dog"
+        },
+        {
+          "isAnswer": false,
+          "text": "An airplane"
+        },
+        {
+          "isAnswer": false,
+          "text": "The clouds"
+        }
+      ]
+    },
+    {
+      "ask": "What jumps higher than a building?",
+      "explanation": "They just can't!",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Everything - buildings don't jump"
+        },
+        {
+          "isAnswer": false,
+          "text": "Grasshopper"
+        },
+        {
+          "isAnswer": false,
+          "text": "Leaper"
+        },
+        {
+          "isAnswer": false,
+          "text": "Lion"
+        }
+      ]
+    },
+    {
+      "ask": "What starts and ends with an e but only has a single letter in it?",
+      "explanation": "Envelopes carry letters / mail",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Envelope"
+        },
+        {
+          "isAnswer": false,
+          "text": "Europe"
+        },
+        {
+          "isAnswer": false,
+          "text": "Ee"
+        },
+        {
+          "isAnswer": false,
+          "text": "Engine"
+        }
+      ]
+    },
+    {
+      "ask": "What always goes to bed with its shoes on?",
+      "explanation": "A horse shoe!",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Horse"
+        },
+        {
+          "isAnswer": false,
+          "text": "Man"
+        },
+        {
+          "isAnswer": false,
+          "text": "Children"
+        },
+        {
+          "isAnswer": false,
+          "text": "Pig"
+        }
+      ]
+    },
+    {
+      "ask": "I am a seed with three letters in my name. Take away the last two and I still sound the same. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Pea"
+        },
+        {
+          "isAnswer": false,
+          "text": "Que"
+        },
+        {
+          "isAnswer": false,
+          "text": "Loo"
+        },
+        {
+          "isAnswer": false,
+          "text": "Moo"
+        }
+      ]
+    },
+    {
+      "ask": "No matter how smart you are, there is one thing you will always overlook, what is it?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Your nose"
+        },
+        {
+          "isAnswer": false,
+          "text": "Your books"
+        },
+        {
+          "isAnswer": false,
+          "text": "Your exam"
+        },
+        {
+          "isAnswer": false,
+          "text": "Your IQ"
+        }
+      ]
+    },
+    {
+      "ask": "You will always find me in the past. I can be created in the present, but the future can never taint me. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "History"
+        },
+        {
+          "isAnswer": false,
+          "text": "Egg"
+        },
+        {
+          "isAnswer": false,
+          "text": "Life"
+        },
+        {
+          "isAnswer": false,
+          "text": "Darkness"
+        }
+      ]
+    },
+    {
+      "ask": "What gets bigger every time you take from it?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A hole"
+        },
+        {
+          "isAnswer": false,
+          "text": "A pancake"
+        },
+        {
+          "isAnswer": false,
+          "text": "Money"
+        },
+        {
+          "isAnswer": false,
+          "text": "A clock"
+        }
+      ]
+    },
+    {
+      "ask": "I am a king who’s good at measuring stuff. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Ruler"
+        },
+        {
+          "isAnswer": false,
+          "text": "Drawer"
+        },
+        {
+          "isAnswer": false,
+          "text": "Henry the Eigth"
+        },
+        {
+          "isAnswer": false,
+          "text": "Stalker"
+        }
+      ]
+    },
+    {
+      "ask": "I run in and out of town all day and night and yet I never get tired? What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A road"
+        },
+        {
+          "isAnswer": false,
+          "text": "A messenger"
+        },
+        {
+          "isAnswer": false,
+          "text": "A ruler"
+        },
+        {
+          "isAnswer": false,
+          "text": "A streetlight"
+        }
+      ]
+    },
+    {
+      "ask": "What does no man want, yet no man want to lose?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "His job"
+        },
+        {
+          "isAnswer": false,
+          "text": "His life"
+        },
+        {
+          "isAnswer": false,
+          "text": "His chair"
+        },
+        {
+          "isAnswer": false,
+          "text": "His light"
+        }
+      ]
+    },
+    {
+      "ask": "I fly without wings, I cry without eyes. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Cloud"
+        },
+        {
+          "isAnswer": false,
+          "text": "Crow"
+        },
+        {
+          "isAnswer": false,
+          "text": "Airplane"
+        },
+        {
+          "isAnswer": false,
+          "text": "Spider"
+        }
+      ]
+    },
+    {
+      "ask": "I am always in front and never behind. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "The future"
+        },
+        {
+          "isAnswer": false,
+          "text": "A movie"
+        },
+        {
+          "isAnswer": false,
+          "text": "A pack of cards"
+        },
+        {
+          "isAnswer": false,
+          "text": "Music"
+        }
+      ]
+    },
+    {
+      "ask": "Precious stones in a pack of cards. Who am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Diamonds"
+        },
+        {
+          "isAnswer": false,
+          "text": "Hearts"
+        },
+        {
+          "isAnswer": false,
+          "text": "Rubies"
+        },
+        {
+          "isAnswer": false,
+          "text": "Gold"
+        }
+      ]
+    },
+    {
+      "ask": "He has married many women, but has never been married. Who is he?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A priest"
+        },
+        {
+          "isAnswer": false,
+          "text": "A king"
+        },
+        {
+          "isAnswer": false,
+          "text": "A dad"
+        },
+        {
+          "isAnswer": false,
+          "text": "A queen"
+        }
+      ]
+    },
+    {
+      "ask": "What has a head and a tail, but no body?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Coin"
+        },
+        {
+          "isAnswer": false,
+          "text": "Shpinx"
+        },
+        {
+          "isAnswer": false,
+          "text": "Lion"
+        },
+        {
+          "isAnswer": false,
+          "text": "Dog"
+        }
+      ]
+    },
+    {
+      "ask": "What kind of room has no doors or windows?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Mushroom"
+        },
+        {
+          "isAnswer": false,
+          "text": "Living Room"
+        },
+        {
+          "isAnswer": false,
+          "text": "Kitchen"
+        },
+        {
+          "isAnswer": false,
+          "text": "Boardroom"
+        }
+      ]
+    },
+    {
+      "ask": "If you have me, you want to share me. If you share me, you haven't got me. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Secret"
+        },
+        {
+          "isAnswer": false,
+          "text": "Apples"
+        },
+        {
+          "isAnswer": false,
+          "text": "Nothing"
+        },
+        {
+          "isAnswer": false,
+          "text": "Everything"
+        }
+      ]
+    },
+    {
+      "ask": "Take off my skin - I won't cry, but you will! What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Onion"
+        },
+        {
+          "isAnswer": false,
+          "text": "Bread"
+        },
+        {
+          "isAnswer": false,
+          "text": "Egg"
+        },
+        {
+          "isAnswer": false,
+          "text": "Tree"
+        }
+      ]
+    },
+    {
+      "ask": "What is as light as a feather, but even the world's strongest man couldn't hold it for more than five minutes?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "His breath"
+        },
+        {
+          "isAnswer": false,
+          "text": "Wooden trees"
+        },
+        {
+          "isAnswer": false,
+          "text": "Steel beams"
+        },
+        {
+          "isAnswer": false,
+          "text": "A feather"
+        }
+      ]
+    },
+    {
+      "ask": "What is always coming but never arrives?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Tomorrow"
+        },
+        {
+          "isAnswer": false,
+          "text": "TV show"
+        },
+        {
+          "isAnswer": false,
+          "text": "Friendship"
+        },
+        {
+          "isAnswer": false,
+          "text": "Food"
+        }
+      ]
+    },
+    {
+      "ask": "I help measure something, but if you look at the number on my face you won't find thirteen anyplace.",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Clock"
+        },
+        {
+          "isAnswer": false,
+          "text": "Chess"
+        },
+        {
+          "isAnswer": false,
+          "text": "Trees"
+        },
+        {
+          "isAnswer": false,
+          "text": "Scale"
+        }
+      ]
+    },
+    {
+      "ask": "The eight of us go forth not back to protect our king from a foes attack.",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Chess Pawns"
+        },
+        {
+          "isAnswer": false,
+          "text": "War Soldiers"
+        },
+        {
+          "isAnswer": false,
+          "text": "Queens"
+        },
+        {
+          "isAnswer": false,
+          "text": "Horse"
+        }
+      ]
+    },
+    {
+      "ask": "The one who makes it, sells it. The one who buys it, never uses it. The one that uses it never knows that he’s using it. What is it?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Coffin"
+        },
+        {
+          "isAnswer": false,
+          "text": "Chocolates"
+        },
+        {
+          "isAnswer": false,
+          "text": "Shoes"
+        },
+        {
+          "isAnswer": false,
+          "text": "Donut"
+        }
+      ]
+    }
+  ]
+}

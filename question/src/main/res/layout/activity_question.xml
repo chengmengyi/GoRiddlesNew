@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="game.riddles.question.R" />
+
+        <variable
+            name="data"
+            type="game.riddles.question.view.QuestionData" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@mipmap/bg_big"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/top_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="20dp">
+
+                    <View
+                        android:id="@+id/bg_exp"
+                        android:layout_width="92dp"
+                        android:layout_height="31dp"
+                        android:background="@drawable/bg_exp"
+                        app:layout_constraintBottom_toBottomOf="@id/iv_level"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_level"
+                        app:layout_constraintTop_toTopOf="@id/iv_level" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_exp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="31dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="@{data.usrLevelExpText}"
+                        android:textColor="#333333"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:typeface="sans"
+                        app:layout_constrainedWidth="true"
+                        app:layout_constraintBottom_toBottomOf="@id/bg_exp"
+                        app:layout_constraintLeft_toRightOf="@id/iv_level"
+                        app:layout_constraintRight_toRightOf="@id/bg_exp"
+                        app:layout_constraintTop_toTopOf="@id/bg_exp"
+                        tools:ignore="RtlHardcoded,SpUsage"
+                        tools:text="13" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_level"
+                        image_res_id="@{data.usrLevelIcon}"
+                        android:layout_width="36dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        tools:src="@mipmap/level_4" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btn_ad_to_coin"
+                        is_enabled="@{data.enableViews}"
+                        android:layout_width="29dp"
+                        android:layout_height="match_parent"
+                        android:onClick="@{data::onShowGetCoinsDialog}"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:srcCompat="@mipmap/btn_question_ad_coin" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="31dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/bg_exp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@id/iv_coin"
+                        app:layout_constraintRight_toLeftOf="@id/btn_ad_to_coin"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlHardcoded" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btn_add_coin"
+                        is_enabled="@{data.enableViews}"
+                        android:layout_width="16dp"
+                        android:layout_height="0dp"
+                        android:layout_marginRight="22dp"
+                        android:onClick="@{data::onShowGetCoinsDialog}"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/btn_ad_to_coin"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/ic_add"
+                        tools:ignore="RtlHardcoded" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_coin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginRight="8dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="@{data.usrCoinText}"
+                        android:textColor="#333333"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:typeface="sans"
+                        app:layout_constrainedWidth="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/btn_add_coin"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlHardcoded,SpUsage"
+                        tools:text="43" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_coin"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_marginRight="7dp"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/tv_coin"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/ic_question_coin"
+                        tools:ignore="RtlHardcoded" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="323dp"
+                    android:layout_height="193dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/bg_question"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginTop="33.66dp"
+                        android:text="@{data.questionSortNum + `.`}"
+                        android:textColor="#000000"
+                        android:textSize="30dp"
+                        android:textStyle="bold"
+                        android:typeface="sans"
+                        tools:ignore="RtlHardcoded,SpUsage"
+                        tools:text="1." />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_marginLeft="33dp"
+                        android:layout_marginRight="33dp"
+                        android:maxLines="4"
+                        android:text="@{data.curQuestion.text}"
+                        android:textColor="#000000"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:typeface="sans"
+                        app:autoSizeMaxTextSize="15dp"
+                        app:autoSizeTextType="uniform"
+                        tools:ignore="SpUsage"
+                        tools:text="Have fun surfing without annoying ads Have fun surfing without annoying ads Have fun surfing without annoying ads Have fun surfing without annoying " />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        image_res_id="@{data.rightOptionIndex == data.usrOptionIndex ? R.mipmap.answer_yes : R.mipmap.answer_no}"
+                        android:layout_width="96dp"
+                        android:layout_height="39dp"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="21dp"
+                        android:visibility="@{data.usrOptionIndex >= 0 ? View.VISIBLE : View.GONE}"
+                        tools:ignore="RtlHardcoded"
+                        tools:src="@mipmap/answer_yes" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="1.66dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@mipmap/bg_question_options"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="31dp"
+                        tools:ignore="RtlHardcoded">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/btn_view_tips"
+                            is_enabled="@{data.enableViews}"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:onClick="@{data::onViewTips}"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@mipmap/btn_explanation" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            is_enabled="@{data.enableViews}"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+                            android:layout_marginLeft="14dp"
+                            android:onClick="@{data::onSearchQuestion}"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@mipmap/btn_question_search" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        is_enabled="@{data.usrOptionIndex == -1 &amp;&amp; data.enableViews}"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="26dp"
+                        android:background="@{data.usrOptionIndex == 0 ? (data.rightOptionIndex == 0 ? @drawable/bg_question_option_yes : @drawable/bg_question_option_no ): @drawable/bg_question_option}"
+                        android:gravity="center_vertical"
+                        android:onClick="@{(view) -> data.onOption(0)}"
+                        android:paddingLeft="17dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="17dp"
+                        android:paddingBottom="8dp"
+                        android:visibility="@{data.curQuestion.options.size() > 0 ? View.VISIBLE : View.GONE}"
+                        tools:background="@drawable/bg_question_option">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="16.7dp"
+                            android:layout_height="21.51dp"
+                            android:gravity="center"
+                            app:srcCompat="@mipmap/option_a" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="18dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@{data.curQuestion.options.size() > 0 ? data.curQuestion.options.get(0).text : ``}"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:typeface="sans"
+                            tools:ignore="HardcodedText,RtlHardcoded,SpUsage"
+                            tools:text="Have fun surfing without annoying ads" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        is_enabled="@{data.usrOptionIndex == -1 &amp;&amp; data.enableViews}"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="26dp"
+                        android:background="@{data.usrOptionIndex == 1 ? (data.rightOptionIndex == 1 ? @drawable/bg_question_option_yes : @drawable/bg_question_option_no ): @drawable/bg_question_option}"
+                        android:gravity="center_vertical"
+                        android:onClick="@{(view) -> data.onOption(1)}"
+                        android:paddingLeft="17dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="17dp"
+                        android:paddingBottom="8dp"
+                        android:visibility="@{data.curQuestion.options.size() > 1 ? View.VISIBLE : View.GONE}"
+                        tools:background="@drawable/bg_question_option_yes">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="16.7dp"
+                            android:layout_height="21.51dp"
+                            android:gravity="center"
+                            app:srcCompat="@mipmap/option_b" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="18dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@{data.curQuestion.options.size() > 1 ? data.curQuestion.options.get(1).text : ``}"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:typeface="sans"
+                            tools:ignore="HardcodedText,RtlHardcoded,SpUsage"
+                            tools:text="Have fun surfing without annoying ads" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        is_enabled="@{data.usrOptionIndex == -1 &amp;&amp; data.enableViews}"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="26dp"
+                        android:background="@{data.usrOptionIndex == 2 ? (data.rightOptionIndex == 2 ? @drawable/bg_question_option_yes : @drawable/bg_question_option_no ): @drawable/bg_question_option}"
+                        android:gravity="center_vertical"
+                        android:onClick="@{(view) -> data.onOption(2)}"
+                        android:paddingLeft="17dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="17dp"
+                        android:paddingBottom="8dp"
+                        android:visibility="@{data.curQuestion.options.size() > 2 ? View.VISIBLE : View.GONE}"
+                        tools:background="@drawable/bg_question_option">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="16.7dp"
+                            android:layout_height="21.51dp"
+                            android:gravity="center"
+                            app:srcCompat="@mipmap/option_c" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="18dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@{data.curQuestion.options.size() > 2 ? data.curQuestion.options.get(2).text : ``}"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:typeface="sans"
+                            tools:ignore="HardcodedText,RtlHardcoded,SpUsage"
+                            tools:text="Have fun surfing without annoying ads" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        is_enabled="@{data.usrOptionIndex == -1 &amp;&amp; data.enableViews}"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginLeft="26dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="26dp"
+                        android:background="@{data.usrOptionIndex == 3 ? (data.rightOptionIndex == 3 ? @drawable/bg_question_option_yes : @drawable/bg_question_option_no ): @drawable/bg_question_option}"
+                        android:gravity="center_vertical"
+                        android:onClick="@{(view) -> data.onOption(3)}"
+                        android:paddingLeft="17dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="17dp"
+                        android:paddingBottom="8dp"
+                        android:visibility="@{data.curQuestion.options.size() > 3 ? View.VISIBLE : View.GONE}"
+                        tools:background="@drawable/bg_question_option_no">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="16.7dp"
+                            android:layout_height="21.51dp"
+                            android:gravity="center"
+                            app:srcCompat="@mipmap/option_d" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="18dp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@{data.curQuestion.options.size() > 3 ? data.curQuestion.options.get(3).text : ``}"
+                            android:textColor="#000000"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:typeface="sans"
+                            tools:ignore="HardcodedText,RtlHardcoded,SpUsage"
+                            tools:text="Have fun surfing without annoying ads" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        is_enabled="@{(data.usrOptionIndex >= 0 || data.questionSortNum > 1) &amp;&amp; data.enableViews}"
+                        android:layout_width="142dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="32dp"
+                        android:background="@mipmap/bg_question_pre"
+                        android:onClick="@{(view) -> data.onPreQuestion()}"
+                        android:padding="15dp"
+                        app:srcCompat="@mipmap/ic_arrow_left"
+                        tools:ignore="RtlHardcoded" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        is_enabled="@{data.usrOptionIndex >= 0 &amp;&amp; data.enableViews}"
+                        android:layout_width="142dp"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/bg_question_next"
+                        android:onClick="@{(view) -> data.onNextQuestion()}"
+                        android:padding="15dp"
+                        app:srcCompat="@mipmap/ic_arrow_right" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="#000000">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@mipmap/home_sel"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Riddies"
+                        android:textSize="12sp"
+                        android:textColor="@color/color_24f4ac"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:onClick="@{data::toServerAc}">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@mipmap/server_uns"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VPN"
+                        android:textSize="12sp"
+                        android:textColor="@color/color_6d6d6d"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/popup_view_help"
+            is_enabled="@{data.enableViews}"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="244dp"
+            android:background="@mipmap/bg_view_help"
+            android:gravity="center"
+            android:onClick="@{(view) -> data.onDismissGuideTips()}"
+            android:paddingBottom="8dp"
+            android:text="Click here for help"
+            android:textColor="#FFFFFF"
+            android:textSize="13dp"
+            android:typeface="sans"
+            android:visibility="@{data.guideViewTips ? View.VISIBLE : View.GONE}"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+    </FrameLayout>
+</layout>

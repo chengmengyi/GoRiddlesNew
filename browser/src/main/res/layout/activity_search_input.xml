@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="game.riddles.browser.view.input.SearchInputData" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_search_input"
+                android:gravity="center_vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_search_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="Search"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:text="@={data.searchContent}"
+                    android:textColor="#22282D"
+                    android:textColorHint="#22282D"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:typeface="sans"
+                    tools:ignore="HardcodedText,SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="10dp"
+                    android:onClick="@{data::onClearInput}"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@mipmap/ic_clear_text"
+                    tools:ignore="RtlHardcoded" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    is_enabled="@{data.searchContent.length() > 0}"
+                    android:layout_width="48dp"
+                    android:layout_height="32dp"
+                    android:layout_marginRight="4dp"
+                    android:onClick="@{(view) -> data.onCompleteInput()}"
+                    app:srcCompat="@mipmap/btn_search_enter"
+                    tools:ignore="RtlHardcoded" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </FrameLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="30dp"
+            android:alpha="0.3">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="7.5dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="Google"
+                android:textColor="#848C95"
+                android:textSize="12dp"
+                android:typeface="sans"
+                app:drawableTopCompat="@mipmap/search_google"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="7.5dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="Microsoft Edge"
+                android:textColor="#848C95"
+                android:textSize="12dp"
+                android:typeface="sans"
+                app:drawableTopCompat="@mipmap/edge"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="7.5dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="Firefox"
+                android:textColor="#848C95"
+                android:textSize="12dp"
+                android:typeface="sans"
+                app:drawableTopCompat="@mipmap/firefox"
+                tools:ignore="HardcodedText,SpUsage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="7.5dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:text="Opera"
+                android:textColor="#848C95"
+                android:textSize="12dp"
+                android:typeface="sans"
+                app:drawableTopCompat="@mipmap/opera"
+                tools:ignore="HardcodedText,SpUsage" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

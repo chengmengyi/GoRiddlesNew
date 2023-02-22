@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.GoRiddles.Splash" parent="Theme.GoRiddles">
+        <item name="android:windowBackground">@mipmap/bg_splash</item>
+    </style>
+</resources>

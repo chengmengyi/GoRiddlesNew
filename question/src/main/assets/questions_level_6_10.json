@@ -1,0 +1,1104 @@
+{
+  "list": [
+    {
+      "ask": "Until I am measured I am not known, yet how you miss me when I have flown.",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Time"
+        },
+        {
+          "isAnswer": false,
+          "text": "Birds"
+        },
+        {
+          "isAnswer": false,
+          "text": "Length"
+        },
+        {
+          "isAnswer": false,
+          "text": "Height"
+        }
+      ]
+    },
+    {
+      "ask": "What has a neck but no head?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A bottle"
+        },
+        {
+          "isAnswer": false,
+          "text": "Horse"
+        },
+        {
+          "isAnswer": false,
+          "text": "Mirror"
+        },
+        {
+          "isAnswer": false,
+          "text": "A box"
+        }
+      ]
+    },
+    {
+      "ask": "What gets wetter as it dries?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Towel"
+        },
+        {
+          "isAnswer": false,
+          "text": "Water"
+        },
+        {
+          "isAnswer": false,
+          "text": "Fire"
+        },
+        {
+          "isAnswer": false,
+          "text": "Air"
+        }
+      ]
+    },
+    {
+      "ask": "What starts with a P, ends with an E and has thousands of letters?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Post Office"
+        },
+        {
+          "isAnswer": false,
+          "text": "Pirate"
+        },
+        {
+          "isAnswer": false,
+          "text": "Purple"
+        },
+        {
+          "isAnswer": false,
+          "text": "Paradise"
+        }
+      ]
+    },
+    {
+      "ask": "How many letters are there in 'the English alphabet'?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "18"
+        },
+        {
+          "isAnswer": false,
+          "text": "26"
+        },
+        {
+          "isAnswer": false,
+          "text": "22"
+        },
+        {
+          "isAnswer": false,
+          "text": "46"
+        }
+      ]
+    },
+    {
+      "ask": "Three men were in a boat. It capsized, but only two got their hair wet. Why?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "He was bald"
+        },
+        {
+          "isAnswer": false,
+          "text": "He flew away"
+        },
+        {
+          "isAnswer": false,
+          "text": "He died"
+        },
+        {
+          "isAnswer": false,
+          "text": "He knew how to swim"
+        }
+      ]
+    },
+    {
+      "ask": "Where does Friday come before Thursday?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "In the dictionary"
+        },
+        {
+          "isAnswer": false,
+          "text": "Yesterday"
+        },
+        {
+          "isAnswer": false,
+          "text": "Last year"
+        },
+        {
+          "isAnswer": false,
+          "text": "In the bible"
+        }
+      ]
+    },
+    {
+      "ask": "What ship has two mates, but no captain?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Relationship"
+        },
+        {
+          "isAnswer": false,
+          "text": "Titanic"
+        },
+        {
+          "isAnswer": false,
+          "text": "Worship"
+        },
+        {
+          "isAnswer": false,
+          "text": "Internship"
+        }
+      ]
+    },
+    {
+      "ask": "Mary’s father has five daughters – Aara, Bara, Cara, Dara. What is the fifth daughter’s name?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Mary"
+        },
+        {
+          "isAnswer": false,
+          "text": "Eara"
+        },
+        {
+          "isAnswer": false,
+          "text": "Fara"
+        },
+        {
+          "isAnswer": false,
+          "text": "Jessie"
+        }
+      ]
+    },
+    {
+      "ask": "What kind of tree can you carry in your hand?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A palm"
+        },
+        {
+          "isAnswer": false,
+          "text": "A fig"
+        },
+        {
+          "isAnswer": false,
+          "text": "A botany"
+        },
+        {
+          "isAnswer": false,
+          "text": "A cowhand"
+        }
+      ]
+    },
+    {
+      "ask": "The more you take, the more you leave behind. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Footsteps"
+        },
+        {
+          "isAnswer": false,
+          "text": "Water"
+        },
+        {
+          "isAnswer": false,
+          "text": "Light"
+        },
+        {
+          "isAnswer": false,
+          "text": "Trees"
+        }
+      ]
+    },
+    {
+      "ask": "What has a head, a tail, but has no legs",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A coin"
+        },
+        {
+          "isAnswer": false,
+          "text": "A horse"
+        },
+        {
+          "isAnswer": false,
+          "text": "A butterfly"
+        },
+        {
+          "isAnswer": false,
+          "text": "A box"
+        }
+      ]
+    },
+    {
+      "ask": "David's father has three sons : Tom, Dick and _____ ?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "David"
+        },
+        {
+          "isAnswer": false,
+          "text": "Harry"
+        },
+        {
+          "isAnswer": false,
+          "text": "Jim"
+        },
+        {
+          "isAnswer": false,
+          "text": "Barry"
+        }
+      ]
+    },
+    {
+      "ask": "What has many keys, but can't even open a single door?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Keyboard"
+        },
+        {
+          "isAnswer": false,
+          "text": "Post Office"
+        },
+        {
+          "isAnswer": false,
+          "text": "Dictionary"
+        },
+        {
+          "isAnswer": false,
+          "text": "Ship"
+        }
+      ]
+    },
+    {
+      "ask": "When does Christmas come before Thanksgiving?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "In the dictionary"
+        },
+        {
+          "isAnswer": false,
+          "text": "Never"
+        },
+        {
+          "isAnswer": false,
+          "text": "Every year"
+        },
+        {
+          "isAnswer": false,
+          "text": "In 2026"
+        }
+      ]
+    },
+    {
+      "ask": "You live in a one storey house made 'entirely of redwood'. What color would the stairs be?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "No stairs"
+        },
+        {
+          "isAnswer": false,
+          "text": "Red"
+        },
+        {
+          "isAnswer": false,
+          "text": "Blue"
+        },
+        {
+          "isAnswer": false,
+          "text": "Black"
+        }
+      ]
+    },
+    {
+      "ask": "What is black when you see it, red when you use it, and gray when you throw it away?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Charcoal"
+        },
+        {
+          "isAnswer": false,
+          "text": "Darkness"
+        },
+        {
+          "isAnswer": false,
+          "text": "Diamond"
+        },
+        {
+          "isAnswer": false,
+          "text": "Water"
+        }
+      ]
+    },
+    {
+      "ask": "Re-arrange the letters, O O U S W T D N E J R to spell just one word.",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "JUST ONE WORD"
+        },
+        {
+          "isAnswer": false,
+          "text": "STONED-JUROW"
+        },
+        {
+          "isAnswer": false,
+          "text": "WORSHIPDOM"
+        },
+        {
+          "isAnswer": false,
+          "text": "STONE DROWN"
+        }
+      ]
+    },
+    {
+      "ask": "I am a green house. Inside me there is a white house. Inside the white house, there is a red house. Inside the red house there are lots of babies. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Watermelon"
+        },
+        {
+          "isAnswer": false,
+          "text": "Earth"
+        },
+        {
+          "isAnswer": false,
+          "text": "Pencil"
+        },
+        {
+          "isAnswer": false,
+          "text": "Christmas Tree"
+        }
+      ]
+    },
+    {
+      "ask": "What is more useful when it is broken?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "An egg"
+        },
+        {
+          "isAnswer": false,
+          "text": "A promise"
+        },
+        {
+          "isAnswer": false,
+          "text": "A glass"
+        },
+        {
+          "isAnswer": false,
+          "text": "A hammer"
+        }
+      ]
+    },
+    {
+      "ask": "They have not flesh, nor feathers, nor scales, nor bone. Yet they have fingers and thumbs of their own. What are they?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Gloves"
+        },
+        {
+          "isAnswer": false,
+          "text": "Dice"
+        },
+        {
+          "isAnswer": false,
+          "text": "Fish"
+        },
+        {
+          "isAnswer": false,
+          "text": "Pillow"
+        }
+      ]
+    },
+    {
+      "ask": "Before Mount Everest was discovered, what was the highest mountain on Earth?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Mount Everest"
+        },
+        {
+          "isAnswer": false,
+          "text": "K2"
+        },
+        {
+          "isAnswer": false,
+          "text": "Mount Ever No Rest"
+        },
+        {
+          "isAnswer": false,
+          "text": "Mount Logan"
+        }
+      ]
+    },
+    {
+      "ask": "How do you spell candy in 2 letters?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "C(and)Y"
+        },
+        {
+          "isAnswer": false,
+          "text": "T(and)X"
+        },
+        {
+          "isAnswer": false,
+          "text": "Mars"
+        },
+        {
+          "isAnswer": false,
+          "text": "Hersheys"
+        }
+      ]
+    },
+    {
+      "ask": "What has many keys, but can't even open a single door?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Keyboard"
+        },
+        {
+          "isAnswer": false,
+          "text": "Post Office"
+        },
+        {
+          "isAnswer": false,
+          "text": "Dictionary"
+        },
+        {
+          "isAnswer": false,
+          "text": "Ship"
+        }
+      ]
+    },
+    {
+      "ask": "A bus driver went right past a stop sign without stopping, he turned left where there was a 'no left turn' sign, still - he didn't break any traffic laws. Why not?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "He was walking, not driving"
+        },
+        {
+          "isAnswer": false,
+          "text": "He was a cop"
+        },
+        {
+          "isAnswer": false,
+          "text": "Not possible"
+        },
+        {
+          "isAnswer": false,
+          "text": "He was broke"
+        }
+      ]
+    },
+    {
+      "ask": "What never asks questions but is often answered?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Doorbell"
+        },
+        {
+          "isAnswer": false,
+          "text": "Teacher"
+        },
+        {
+          "isAnswer": false,
+          "text": "Fire"
+        },
+        {
+          "isAnswer": false,
+          "text": "The President"
+        }
+      ]
+    },
+    {
+      "ask": "When is a doctor most annoyed?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "When he was out of patients"
+        },
+        {
+          "isAnswer": false,
+          "text": "When he sees a nurse"
+        },
+        {
+          "isAnswer": false,
+          "text": "When he was reading"
+        },
+        {
+          "isAnswer": false,
+          "text": "When he is operating"
+        }
+      ]
+    },
+    {
+      "ask": "When is it bad luck to see a black cat?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "When you're a mouse"
+        },
+        {
+          "isAnswer": false,
+          "text": "Never"
+        },
+        {
+          "isAnswer": false,
+          "text": "Always"
+        },
+        {
+          "isAnswer": false,
+          "text": "When you're running"
+        }
+      ]
+    },
+    {
+      "ask": "I am full of holes but I can still hold water. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Sponge"
+        },
+        {
+          "isAnswer": false,
+          "text": "Pencil"
+        },
+        {
+          "isAnswer": false,
+          "text": "iPhone"
+        },
+        {
+          "isAnswer": false,
+          "text": "A glass"
+        }
+      ]
+    },
+    {
+      "ask": "What runs around the whole yard without moving?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A fence"
+        },
+        {
+          "isAnswer": false,
+          "text": "A hammer"
+        },
+        {
+          "isAnswer": false,
+          "text": "A rabbit"
+        },
+        {
+          "isAnswer": false,
+          "text": "A dog"
+        }
+      ]
+    },
+    {
+      "ask": "You have me today, but tomorrow you'll have more; I'm not easy to store but I don't take up space. I am what you saw, but not what you see. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Memories"
+        },
+        {
+          "isAnswer": false,
+          "text": "Money"
+        },
+        {
+          "isAnswer": false,
+          "text": "Water"
+        },
+        {
+          "isAnswer": false,
+          "text": "Darkness"
+        }
+      ]
+    },
+    {
+      "ask": "Which part of a road do Ghost's love to travel the most?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "The Dead End"
+        },
+        {
+          "isAnswer": false,
+          "text": "The Highway"
+        },
+        {
+          "isAnswer": false,
+          "text": "The Sidewalk"
+        },
+        {
+          "isAnswer": false,
+          "text": "The Platform"
+        }
+      ]
+    },
+    {
+      "ask": "I have a little house in which I live all alone. It has no doors or windows, and if I want to go out I must break through the wall. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A chick in an egg"
+        },
+        {
+          "isAnswer": false,
+          "text": "Red Riding Hood"
+        },
+        {
+          "isAnswer": false,
+          "text": "Fishes in the tank"
+        },
+        {
+          "isAnswer": false,
+          "text": "A dog"
+        }
+      ]
+    },
+    {
+      "ask": "I'm green sometimes, brown other times but both cause me to frown. But just in between I'm yellow and cause me to smile! Who am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Banana"
+        },
+        {
+          "isAnswer": false,
+          "text": "Trees"
+        },
+        {
+          "isAnswer": false,
+          "text": "Storybook"
+        },
+        {
+          "isAnswer": false,
+          "text": "Apple"
+        }
+      ]
+    },
+    {
+      "ask": "Railroad - can you spell that without R's?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Yes, 'that' has no R's"
+        },
+        {
+          "isAnswer": false,
+          "text": "2 R's"
+        },
+        {
+          "isAnswer": false,
+          "text": "aiload"
+        },
+        {
+          "isAnswer": false,
+          "text": "Not possible"
+        }
+      ]
+    },
+    {
+      "ask": "I’m tall when I’m young and I’m short when I’m old. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Pencil"
+        },
+        {
+          "isAnswer": false,
+          "text": "Train"
+        },
+        {
+          "isAnswer": false,
+          "text": "Doctor"
+        },
+        {
+          "isAnswer": false,
+          "text": "House"
+        }
+      ]
+    },
+    {
+      "ask": "There is an ancient invention still used in some parts of the world today that allows people to see through walls. What is it?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A window"
+        },
+        {
+          "isAnswer": false,
+          "text": "A magic box"
+        },
+        {
+          "isAnswer": false,
+          "text": "A tiny pin"
+        },
+        {
+          "isAnswer": false,
+          "text": "A wall"
+        }
+      ]
+    },
+    {
+      "ask": "Tool of thief, toy of queen. Always used to be unseen. Sign of joy, sign of sorrow. Giving all likeness borrowed. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A mask"
+        },
+        {
+          "isAnswer": false,
+          "text": "Never"
+        },
+        {
+          "isAnswer": false,
+          "text": "A crown"
+        },
+        {
+          "isAnswer": false,
+          "text": "A toothpick"
+        }
+      ]
+    },
+    {
+      "ask": "You have three stoves: a gas stove, a wood stove, and a coal stove, but only one match. Which should you light first?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A Match"
+        },
+        {
+          "isAnswer": false,
+          "text": "Coal stove"
+        },
+        {
+          "isAnswer": false,
+          "text": "Gas stove"
+        },
+        {
+          "isAnswer": false,
+          "text": "Wood stove"
+        }
+      ]
+    },
+    {
+      "ask": "What 7 letter word is spelled the same way backwards and forewords?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Racecar"
+        },
+        {
+          "isAnswer": false,
+          "text": "Oddeven"
+        },
+        {
+          "isAnswer": false,
+          "text": "Raabibaar"
+        },
+        {
+          "isAnswer": false,
+          "text": "Doggiedo"
+        }
+      ]
+    },
+    {
+      "ask": "When can you add two to eleven and get one as the correct answer?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "In a clock"
+        },
+        {
+          "isAnswer": false,
+          "text": "In Maths"
+        },
+        {
+          "isAnswer": false,
+          "text": "In negative numbers"
+        },
+        {
+          "isAnswer": false,
+          "text": "Never"
+        }
+      ]
+    },
+    {
+      "ask": "If a rooster laid a brown egg and a white egg, what kind of chicks would hatch?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Roosters don't lay eggs"
+        },
+        {
+          "isAnswer": false,
+          "text": "Brown and White"
+        },
+        {
+          "isAnswer": false,
+          "text": "Gold and Brown"
+        },
+        {
+          "isAnswer": false,
+          "text": "Yellow"
+        }
+      ]
+    },
+    {
+      "ask": "If you have me, you want to share me. If you share me, you haven't got me. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A secret"
+        },
+        {
+          "isAnswer": false,
+          "text": "Your name"
+        },
+        {
+          "isAnswer": false,
+          "text": "Your dog"
+        },
+        {
+          "isAnswer": false,
+          "text": "A house"
+        }
+      ]
+    },
+    {
+      "ask": "What are moving left to right at this instant?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Your eyes"
+        },
+        {
+          "isAnswer": false,
+          "text": "A car"
+        },
+        {
+          "isAnswer": false,
+          "text": "The Earth"
+        },
+        {
+          "isAnswer": false,
+          "text": "Your phone"
+        }
+      ]
+    },
+    {
+      "ask": "If you were running a race, and you passed the person in 2nd place, what place would you be in now?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "2nd"
+        },
+        {
+          "isAnswer": false,
+          "text": "3rd"
+        },
+        {
+          "isAnswer": false,
+          "text": "1st"
+        },
+        {
+          "isAnswer": false,
+          "text": "Last"
+        }
+      ]
+    },
+    {
+      "ask": "How can you take 2 from 5 and leave 4?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "IV (Remove F&E)"
+        },
+        {
+          "isAnswer": false,
+          "text": "Subtraction"
+        },
+        {
+          "isAnswer": false,
+          "text": "Not possible"
+        },
+        {
+          "isAnswer": false,
+          "text": "Multiply 2*3"
+        }
+      ]
+    },
+    {
+      "ask": "What goes up but never comes down?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Age"
+        },
+        {
+          "isAnswer": false,
+          "text": "Gravity"
+        },
+        {
+          "isAnswer": false,
+          "text": "Tree"
+        },
+        {
+          "isAnswer": false,
+          "text": "Name"
+        }
+      ]
+    },
+    {
+      "ask": "I make you, I'm always in you; If I surround you, I can kill you. What am I?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "Water"
+        },
+        {
+          "isAnswer": false,
+          "text": "Air"
+        },
+        {
+          "isAnswer": false,
+          "text": "Rope"
+        },
+        {
+          "isAnswer": false,
+          "text": "Poison"
+        }
+      ]
+    },
+    {
+      "ask": "You have three stoves: a gas stove, a wood stove, and a coal stove, but only one match. Which should you light first?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "A Match"
+        },
+        {
+          "isAnswer": false,
+          "text": "Coal stove"
+        },
+        {
+          "isAnswer": false,
+          "text": "Gas stove"
+        },
+        {
+          "isAnswer": false,
+          "text": "Wood stove"
+        }
+      ]
+    },
+    {
+      "ask": "Little tommy Tittletat took two Ts. To tie two ups to two tall trees. To torment the terrible tittletat, How many Ts in all of that?",
+      "explanation": "",
+      "options": [
+        {
+          "isAnswer": true,
+          "text": "2 T's in 'that'"
+        },
+        {
+          "isAnswer": false,
+          "text": "28 T's"
+        },
+        {
+          "isAnswer": false,
+          "text": "26 T's"
+        },
+        {
+          "isAnswer": false,
+          "text": "29 T's"
+        }
+      ]
+    }
+  ]
+}
