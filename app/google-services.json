@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "447514613149",
+    "project_id": "go--riddles",
+    "storage_bucket": "go--riddles.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447514613149:android:3cd634ec50014acb4c0b74",
+        "android_client_info": {
+          "package_name": "com.goriddles.ingenuity.answer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "447514613149-64glrc4189fta6asjqh8bn174b7ai47e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDKcs-QnDsVv9JJ-HajOxOkAsQj1wCJQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "447514613149-64glrc4189fta6asjqh8bn174b7ai47e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -14,46 +14,32 @@ object Local {
 
 
     const val SERVER_LIST="""[
-  {
-    "goRi_pwd": "123456",
+{
+    "goRi_pwd": "9OuPVw#UBajyyzM",
     "goRi_account": "chacha20-ietf-poly1305",
-    "goRi_port": 100,
-    "goRi_country": "Japan",
-    "goRi_city": "Tokyo",
-    "goRi_ip": "100.223.52.0"
-  },
-   {
-    "goRi_pwd": "123456",
-    "goRi_account": "chacha20-ietf-poly1305",
-    "goRi_port": 100,
-    "goRi_country": "United States",
-    "goRi_city": "newyork",
-    "goRi_ip": "100.223.52.1"
+    "goRi_port": 5691,
+    "goRi_country": "Austria",
+    "goRi_city": "Vienna1",
+    "goRi_ip": "158.255.212.246"
   }
 ]"""
 
 
     const val AD_LIST="""{
-            "max_click":15,
+    "max_click":15,
     "max_show":50,
     "enterid_open": [
         {
             "from": "admob",
-            "data_id": "ca-app-pub-3940256099942544/3419835294",
+            "data_id": "ca-app-pub-6337191878285963/1280294363",
             "type": "o",
             "index": 1
-        },
-        {
-            "from": "admob",
-            "data_id": "ca-app-pub-3940256099942544/3419835294A",
-            "type": "o",
-            "index": 2
         }
     ],
      "enterid_home": [
         {
             "from": "admob",
-            "data_id": "ca-app-pub-3940256099942544/2247696110",
+            "data_id": "ca-app-pub-6337191878285963/7548329678",
             "type": "n",
             "index": 2
         }
@@ -61,7 +47,7 @@ object Local {
       "enterid_result": [
         {
             "from": "admob",
-            "data_id": "ca-app-pub-3940256099942544/2247696110",
+            "data_id": "ca-app-pub-6337191878285963/5201367935",
             "type": "n",
             "index": 2
         }
@@ -69,7 +55,7 @@ object Local {
      "enterid_reward": [
         {
             "from": "admob",
-            "data_id": "ca-app-pub-3940256099942544/8691691433",
+            "data_id": "ca-app-pub-6337191878285963/5305309712",
             "type": "i",
             "index": 2
         }
@@ -77,7 +63,7 @@ object Local {
      "enterid_time": [
         {
             "from": "admob",
-            "data_id": "ca-app-pub-3940256099942544/8691691433",
+            "data_id": "ca-app-pub-6337191878285963/6426819699",
             "type": "i",
             "index": 2
         }

@@ -3,6 +3,8 @@ package game.riddles.core.top
 import android.app.Application
 import androidx.annotation.CallSuper
 import com.blankj.utilcode.util.ProcessUtils
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.ktx.initialize
 import game.riddles.core.event.TEvent
 import game.riddles.core.utils.FirebaseUtils
 import kotlinx.coroutines.MainScope
@@ -23,6 +25,7 @@ abstract class BaseApplication : Application() {
 
     @CallSuper
     protected open fun onMainProcessCreate() {
+        Firebase.initialize(this)
         FirebaseUtils.init(this)
         initTEvents()
     }

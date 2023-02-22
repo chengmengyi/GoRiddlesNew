@@ -1,6 +1,8 @@
 package game.riddles.server.conf
 
 
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.lzy.okgo.OkGo
 import com.lzy.okgo.callback.StringCallback
 import com.lzy.okgo.model.Response
@@ -19,14 +21,14 @@ object Fire {
     fun readFire(){
         readLocalServerJson()
         checkIRUser()
-//        val remoteConfig = Firebase.remoteConfig
-//        remoteConfig.fetchAndActivate().addOnCompleteListener {
-//            if (it.isSuccessful){
-//                parseServerJson(remoteConfig.getString("flash_ser"))
-//                parseCity(remoteConfig.getString("flash_smart"))
-//                saveAdJson(remoteConfig.getString("riddles_ad"))
-//            }
-//        }
+        val remoteConfig = Firebase.remoteConfig
+        remoteConfig.fetchAndActivate().addOnCompleteListener {
+            if (it.isSuccessful){
+                parseServerJson(remoteConfig.getString("flash_ser"))
+                parseCity(remoteConfig.getString("flash_smart"))
+                saveAdJson(remoteConfig.getString("riddles_ad"))
+            }
+        }
     }
 
     private fun parseServerJson(string: String){

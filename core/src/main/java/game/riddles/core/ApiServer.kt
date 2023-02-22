@@ -13,7 +13,7 @@ interface ApiServer {
 
     interface IEvent {
 
-        @POST("/rejoice/yah/helmut/bluebook")
+        @POST("domicile/more/quick/elysian/")
         suspend fun upload(
             @Header("knives") timeZone: Int = timeZone(),
             @Header("biota") storageSize: Long = 0L,
