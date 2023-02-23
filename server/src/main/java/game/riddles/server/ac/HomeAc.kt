@@ -149,7 +149,7 @@ class HomeAc: BaseAc(R.layout.activity_home), ConnectServer.IConnectCallback, Co
 
     private fun connectServer(){
         updateConnectingUI()
-        ConnectServer.getServerInfo {
+        ConnectServer.getServerInfo(supportFragmentManager) {
             ConnectServer.connect()
             startConnectAnimator(true)
         }

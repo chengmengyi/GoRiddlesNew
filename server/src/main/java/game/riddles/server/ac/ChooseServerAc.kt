@@ -37,7 +37,7 @@ class ChooseServerAc: BaseAc(R.layout.activity_choose_server) {
         if(null!=serverBean.serverInfo){
             getServerInfoSuccess(serverBean.serverInfo,serverBean.isFast())
         }else{
-            ServerInfoManager.getServerInfo(serverBean.grinder){
+            ServerInfoManager.getServerInfo(supportFragmentManager,serverBean.grinder){
                 if(null!=it){
                     getServerInfoSuccess(it,serverBean.isFast())
                 }else{

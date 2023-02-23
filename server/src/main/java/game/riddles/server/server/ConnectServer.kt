@@ -1,5 +1,6 @@
 package game.riddles.server.server
 
+import androidx.fragment.app.FragmentManager
 import com.github.shadowsocks.Core
 import com.github.shadowsocks.aidl.IShadowsocksService
 import com.github.shadowsocks.aidl.ShadowsocksConnection
@@ -48,10 +49,10 @@ object ConnectServer: ShadowsocksConnection.Callback {
         }
     }
 
-    fun getServerInfo(callback:()->Unit){
+    fun getServerInfo(fragmentManager: FragmentManager,callback:()->Unit){
         if (currentServer.isFast()){
             if (ServerInfoManager.loadOnlineSuccess){
-                ServerInfoManager.getServerInfo(null){
+                ServerInfoManager.getServerInfo(fragmentManager,null){
                     if(null!=it){
                         fastServer = it
                         callback.invoke()
@@ -86,7 +87,6 @@ object ConnectServer: ShadowsocksConnection.Callback {
 
     override fun stateChanged(state: BaseService.State, profileName: String?, msg: String?) {
         ConnectServer.state =state
-        logGo("==stateChanged===${state}===")
         if (isConnected()){
             lastServer = currentServer
             ConnectTimeManager.start()
@@ -105,11 +105,6 @@ object ConnectServer: ShadowsocksConnection.Callback {
             ConnectTimeManager.start()
             iConnectCallback?.connectSuccess()
         }
-    }
-
-    override fun onServiceDisconnected() {
-        super.onServiceDisconnected()
-        logGo("==onServiceDisconnected=====")
     }
 
     override fun onBinderDied() {

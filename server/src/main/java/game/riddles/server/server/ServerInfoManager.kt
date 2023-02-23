@@ -1,11 +1,13 @@
 package game.riddles.server.server
 
 import android.util.Log
+import androidx.fragment.app.FragmentManager
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.lzy.okgo.OkGo
 import com.lzy.okgo.callback.StringCallback
 import com.lzy.okgo.model.Response
+import game.riddles.server.LoadingDialog
 import game.riddles.server.bean.ConfigServerBean
 import game.riddles.server.bean.ServerBean
 import game.riddles.server.bean.ServerInfoBean
@@ -100,17 +102,20 @@ object ServerInfoManager {
     private fun base64Body(string: String):String=String(android.util.Base64.decode(StringBuffer(string).reverse().toString(),android.util.Base64.DEFAULT))
 
 
-    fun getServerInfo(cityId:Int?,callback:(bean:ServerBean?)->Unit){
+    fun getServerInfo(fragmentManager: FragmentManager,cityId:Int?,callback:(bean:ServerBean?)->Unit){
         var path="${url}api/server/sandm/?departure=ss"
         if(null!=cityId&&cityId>0){
             path+="&staff=${cityId}"
         }
+        val loadingDialog = LoadingDialog()
+        loadingDialog.show(fragmentManager,"LoadingDialog")
         OkGo.get<String>(path)
             .headers("ctr", Locale.getDefault().country)
             .headers("pkg", myApp.packageName)
             .headers("dev", getAndroidId(myApp))
             .execute(object : StringCallback(){
                 override fun onSuccess(response: Response<String>?) {
+                    loadingDialog.dismiss()
                     val base64Body = base64Body(response?.body()?.toString() ?: "")
                     logGo("==onSuccess===${base64Body}=")
                     parseServerInfoJson(base64Body,callback)
@@ -118,6 +123,7 @@ object ServerInfoManager {
 
                 override fun onError(response: Response<String>?) {
                     super.onError(response)
+                    loadingDialog.dismiss()
                     Log.e("qwer","=onError===${response?.body()?.toString()}=")
                     callback.invoke(null)
                 }
