@@ -17,6 +17,7 @@ import game.riddles.server.admob.LoadAdImpl
 import game.riddles.server.admob.ShowFullAd
 import game.riddles.server.admob.ShowNativeAd
 import game.riddles.server.base.BaseAc
+import game.riddles.server.bean.ServerBean
 import game.riddles.server.conf.Fire
 import game.riddles.server.conf.Local
 import game.riddles.server.server.ConnectServer
@@ -148,8 +149,10 @@ class HomeAc: BaseAc(R.layout.activity_home), ConnectServer.IConnectCallback, Co
 
     private fun connectServer(){
         updateConnectingUI()
-        ConnectServer.connect()
-        startConnectAnimator(true)
+        ConnectServer.getServerInfo {
+            ConnectServer.connect()
+            startConnectAnimator(true)
+        }
     }
 
     private fun startConnectAnimator(connect:Boolean){
@@ -224,8 +227,8 @@ class HomeAc: BaseAc(R.layout.activity_home), ConnectServer.IConnectCallback, Co
 
     private fun updateServerInfo(){
         val currentServer = ConnectServer.currentServer
-        tv_name.text=currentServer.goRi_country
-        iv_logo.setImageResource(getServerLogo(currentServer.goRi_country))
+        tv_name.text=if(currentServer.isFast()) currentServer.map else "${currentServer.map} - ${currentServer.volts}"
+        iv_logo.setImageResource(getServerLogo(currentServer.map?:""))
     }
 
     private fun updateConnectingUI(){

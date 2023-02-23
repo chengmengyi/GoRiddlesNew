@@ -30,26 +30,26 @@ object Fire {
     }
 
     private fun parseServerJson(string: String){
-        try {
-            ServerInfoManager.onlineServerList.clear()
-            val jsonArray = JSONArray(string)
-            for (index in 0 until jsonArray.length()){
-                val jsonObject = jsonArray.getJSONObject(index)
-                ServerInfoManager.onlineServerList.add(
-                    ServerBean(
-                        goRi_pwd = jsonObject.optString("goRi_pwd"),
-                        goRi_account=jsonObject.optString("goRi_account"),
-                        goRi_port = jsonObject.optInt("goRi_port"),
-                        goRi_country=jsonObject.optString("goRi_country"),
-                        goRi_city=jsonObject.optString("goRi_city"),
-                        goRi_ip=jsonObject.optString("goRi_ip")
-                    )
-                )
-            }
-            writeServer(ServerInfoManager.onlineServerList)
-        }catch (e:Exception){
+//        try {
+//            ServerInfoManager.onlineServerList.clear()
+//            val jsonArray = JSONArray(string)
+//            for (index in 0 until jsonArray.length()){
+//                val jsonObject = jsonArray.getJSONObject(index)
+//                ServerInfoManager.onlineServerList.add(
+//                    ServerBean(
+//                        goRi_pwd = jsonObject.optString("goRi_pwd"),
+//                        goRi_account=jsonObject.optString("goRi_account"),
+//                        goRi_port = jsonObject.optInt("goRi_port"),
+//                        goRi_country=jsonObject.optString("goRi_country"),
+//                        goRi_city=jsonObject.optString("goRi_city"),
+//                        goRi_ip=jsonObject.optString("goRi_ip")
+//                    )
+//                )
+//            }
+//            writeServer(ServerInfoManager.onlineServerList)
+//        }catch (e:Exception){
 
-        }
+//        }
     }
 
     private fun parseCity(string: String){
@@ -84,26 +84,26 @@ object Fire {
     }
 
     private fun readLocalServerJson(){
-        try {
-            ServerInfoManager.localServerList.clear()
-            val jsonArray = JSONArray(Local.SERVER_LIST)
-            for (index in 0 until jsonArray.length()){
-                val jsonObject = jsonArray.getJSONObject(index)
-                ServerInfoManager.localServerList.add(
-                    ServerBean(
-                        goRi_pwd = jsonObject.optString("goRi_pwd"),
-                        goRi_account=jsonObject.optString("goRi_account"),
-                        goRi_port = jsonObject.optInt("goRi_port"),
-                        goRi_country=jsonObject.optString("goRi_country"),
-                        goRi_city=jsonObject.optString("goRi_city"),
-                        goRi_ip=jsonObject.optString("goRi_ip")
-                    )
-                )
-            }
-            writeServer(ServerInfoManager.localServerList)
-        }catch (e:Exception){
-
-        }
+//        try {
+//            ServerInfoManager.localServerList.clear()
+//            val jsonArray = JSONArray(Local.SERVER_LIST)
+//            for (index in 0 until jsonArray.length()){
+//                val jsonObject = jsonArray.getJSONObject(index)
+//                ServerInfoManager.localServerList.add(
+//                    ServerBean(
+//                        goRi_pwd = jsonObject.optString("goRi_pwd"),
+//                        goRi_account=jsonObject.optString("goRi_account"),
+//                        goRi_port = jsonObject.optInt("goRi_port"),
+//                        goRi_country=jsonObject.optString("goRi_country"),
+//                        goRi_city=jsonObject.optString("goRi_city"),
+//                        goRi_ip=jsonObject.optString("goRi_ip")
+//                    )
+//                )
+//            }
+//            writeServer(ServerInfoManager.localServerList)
+//        }catch (e:Exception){
+//
+//        }
     }
 
     private fun writeServer(list:ArrayList<ServerBean>){

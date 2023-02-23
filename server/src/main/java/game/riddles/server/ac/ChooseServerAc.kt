@@ -9,8 +9,12 @@ import game.riddles.server.admob.LoadAdImpl
 import game.riddles.server.admob.ShowFullAd
 import game.riddles.server.base.BaseAc
 import game.riddles.server.bean.ServerBean
+import game.riddles.server.bean.ServerInfoBean
+import game.riddles.server.bean.ServerListBean
 import game.riddles.server.conf.Local
 import game.riddles.server.server.ConnectServer
+import game.riddles.server.server.ServerInfoManager
+import game.riddles.server.util.showToast
 import kotlinx.android.synthetic.main.activity_choose_server.*
 
 class ChooseServerAc: BaseAc(R.layout.activity_choose_server) {
@@ -29,23 +33,41 @@ class ChooseServerAc: BaseAc(R.layout.activity_choose_server) {
         }
     }
 
-    private fun click(serverBean: ServerBean){
-        val currentServer = ConnectServer.currentServer
-        val connected = ConnectServer.isConnected()
-        if (connected&&currentServer.goRi_ip!=serverBean.goRi_ip){
-            showDialog { chooseServer("disconnect",serverBean) }
+    private fun click(serverBean: ServerListBean){
+        if(null!=serverBean.serverInfo){
+            getServerInfoSuccess(serverBean.serverInfo,serverBean.isFast())
         }else{
-            if (connected){
-                chooseServer("",serverBean)
-            }else{
-                chooseServer("connect",serverBean)
+            ServerInfoManager.getServerInfo(serverBean.grinder){
+                if(null!=it){
+                    getServerInfoSuccess(it,serverBean.isFast())
+                }else{
+                    showToast("Failed to get server information")
+                }
             }
         }
     }
 
 
-    private fun chooseServer(result:String,serverBean: ServerBean){
-        ConnectServer.currentServer=serverBean
+    private fun getServerInfoSuccess(it:ServerBean,isFast:Boolean){
+        val currentServer = ConnectServer.currentServer
+        val connected = ConnectServer.isConnected()
+        if (connected&&currentServer.canal!=it.canal){
+            showDialog { chooseServer("disconnect",it,isFast) }
+        }else{
+            if (connected){
+                chooseServer("",it,isFast)
+            }else{
+                chooseServer("connect",it,isFast)
+            }
+        }
+    }
+
+    private fun chooseServer(result:String,serverBean: ServerBean,isFast:Boolean){
+        if(isFast){
+            ConnectServer.currentServer=ServerBean()
+        }else{
+            ConnectServer.currentServer=serverBean
+        }
         setResult(1000, Intent().apply {
             putExtra("action",result)
         })

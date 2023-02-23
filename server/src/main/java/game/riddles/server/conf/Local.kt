@@ -15,20 +15,20 @@ object Local {
 
     const val SERVER_LIST="""[
   {
-    "goRi_pwd": "123456",
-    "goRi_account": "chacha20-ietf-poly1305",
-    "goRi_port": 100,
-    "goRi_country": "Japan",
-    "goRi_city": "Tokyo",
-    "goRi_ip": "100.223.52.0"
+    "thresholds": "123456",
+    "probe": "chacha20-ietf-poly1305",
+    "office": 100,
+    "map": "Japan",
+    "volts": "Tokyo",
+    "canal": "100.223.52.0"
   },
    {
-    "goRi_pwd": "123456",
-    "goRi_account": "chacha20-ietf-poly1305",
-    "goRi_port": 100,
-    "goRi_country": "United States",
-    "goRi_city": "newyork",
-    "goRi_ip": "100.223.52.1"
+    "thresholds": "123456",
+    "probe": "chacha20-ietf-poly1305",
+    "office": 100,
+    "map": "United States",
+    "volts": "newyork",
+    "canal": "100.223.52.1"
   }
 ]"""
 

@@ -4,18 +4,21 @@ import com.github.shadowsocks.database.Profile
 import com.github.shadowsocks.database.ProfileManager
 
 class ServerBean(
-    val goRi_pwd:String="",
-    val goRi_account:String="",
-    val goRi_port:Int=0,
-    val goRi_country:String="Faster server",
-    val goRi_city:String="",
-    val goRi_ip:String="",
-) {
-    fun isFast()=goRi_country=="Faster server"&&goRi_ip.isEmpty()
+    val adjectives: String?="",
+    val canal: String?="",
+    val departure: String?="",
+    val map: String?="Faster server",
+    val mouths: String?="",
+    val office: Int?=0,
+    val probe: String?="",
+    val thresholds: String?="",
+    val volts: String?="",
+){
+    fun isFast()=map=="Faster server"
 
     fun getServerId():Long{
         ProfileManager.getActiveProfiles()?.forEach {
-            if (it.host==goRi_ip&&it.remotePort==goRi_port){
+            if (it.host==canal&&it.remotePort==office){
                 return it.id
             }
         }
@@ -25,25 +28,39 @@ class ServerBean(
     fun writeServerId(){
         val profile = Profile(
             id = 0L,
-            name = "$goRi_country - $goRi_city",
-            host = goRi_ip,
-            remotePort = goRi_port,
-            password = goRi_pwd,
-            method = goRi_account
+            name = "$map - $volts",
+            host = canal?:"",
+            remotePort = office?:0,
+            password = thresholds?:"",
+            method = probe?:""
         )
 
         var id:Long?=null
-        ProfileManager.getActiveProfiles()?.forEach {
-            if (it.remotePort==profile.remotePort&&it.host==profile.host){
-                id=it.id
-                return@forEach
+//        ProfileManager.getActiveProfiles()?.forEach {
+//            if (it.remotePort==profile.remotePort&&it.host==profile.host){
+//                id=it.id
+//                return@forEach
+//            }
+//        }
+
+        val activeProfiles = ProfileManager.getActiveProfiles()
+        if (null!=activeProfiles){
+            for (it in activeProfiles){
+                if (it.remotePort==profile.remotePort&&it.host==profile.host){
+                    id=it.id
+                    break
+                }
             }
         }
-        if (null==id){
-            ProfileManager.createProfile(profile)
-        }else{
-            profile.id=id!!
-            ProfileManager.updateProfile(profile)
+        if(id!=null){
+            ProfileManager.delProfile(id)
         }
+        ProfileManager.createProfile(profile)
+//        if (null==id){
+//            ProfileManager.createProfile(profile)
+//        }else{
+//            profile.id=id
+//            ProfileManager.updateProfile(profile)
+//        }
     }
 }

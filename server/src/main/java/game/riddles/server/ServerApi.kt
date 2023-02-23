@@ -9,7 +9,7 @@ import com.tencent.mmkv.MMKV
 import game.riddles.server.ac.HomeAc
 import game.riddles.server.admob.LoadAdImpl
 import game.riddles.server.conf.Fire
-import game.riddles.server.conf.ServerOkManager
+import game.riddles.server.server.ServerInfoManager
 import game.riddles.server.tba.TbaManager
 import game.riddles.server.util.AcRegister
 import game.riddles.server.util.AdShowed
@@ -27,7 +27,7 @@ object ServerApi {
         myApp=app
         MMKV.initialize(app)
         AcRegister.register(app)
-        ServerOkManager.getServerList()
+        ServerInfoManager.getConfigAllServerList()
         Fire.readFire()
     }
 

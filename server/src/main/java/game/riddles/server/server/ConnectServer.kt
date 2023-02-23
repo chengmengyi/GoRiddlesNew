@@ -7,7 +7,10 @@ import com.github.shadowsocks.bg.BaseService
 import com.github.shadowsocks.preference.DataStore
 import game.riddles.server.base.BaseAc
 import game.riddles.server.bean.ServerBean
+import game.riddles.server.bean.ServerInfoBean
+import game.riddles.server.util.logGo
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 object ConnectServer: ShadowsocksConnection.Callback {
@@ -29,14 +32,44 @@ object ConnectServer: ShadowsocksConnection.Callback {
     fun connect(){
         state = BaseService.State.Connecting
         ConnectTimeManager.reset()
-        GlobalScope.launch {
-            if (currentServer.isFast()){
-                fastServer = ServerInfoManager.getFastServer()
+        if (currentServer.isFast()){
+            GlobalScope.launch {
+                delay(500L)
                 DataStore.profileId = fastServer.getServerId()
-            }else{
-                DataStore.profileId = currentServer.getServerId()
+                logGo("=currentServer.isFast()===connect===${fastServer.getServerId()}=")
+                Core.startService()
             }
-            Core.startService()
+        }else{
+            GlobalScope.launch {
+                DataStore.profileId = currentServer.getServerId()
+                logGo("=chooseserver===connect=====${currentServer.getServerId()}")
+                Core.startService()
+            }
+        }
+    }
+
+    fun getServerInfo(callback:()->Unit){
+        if (currentServer.isFast()){
+            if (ServerInfoManager.loadOnlineSuccess){
+                ServerInfoManager.getServerInfo(null){
+                    if(null!=it){
+                        fastServer = it
+                        callback.invoke()
+                    }else{
+                        state = BaseService.State.Stopped
+                    }
+                }
+            }else{
+                if(ServerInfoManager.configServerList.isNotEmpty()){
+                    val random = ServerInfoManager.configServerList.random()
+                    if(random.serverInfo != null){
+                        fastServer = random.serverInfo
+                        callback.invoke()
+                    }
+                }
+            }
+        }else{
+            callback.invoke()
         }
     }
 
@@ -53,6 +86,7 @@ object ConnectServer: ShadowsocksConnection.Callback {
 
     override fun stateChanged(state: BaseService.State, profileName: String?, msg: String?) {
         ConnectServer.state =state
+        logGo("==stateChanged===${state}===")
         if (isConnected()){
             lastServer = currentServer
             ConnectTimeManager.start()
@@ -71,6 +105,11 @@ object ConnectServer: ShadowsocksConnection.Callback {
             ConnectTimeManager.start()
             iConnectCallback?.connectSuccess()
         }
+    }
+
+    override fun onServiceDisconnected() {
+        super.onServiceDisconnected()
+        logGo("==onServiceDisconnected=====")
     }
 
     override fun onBinderDied() {
