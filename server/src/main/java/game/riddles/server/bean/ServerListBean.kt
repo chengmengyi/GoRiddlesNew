@@ -1,5 +1,8 @@
 package game.riddles.server.bean
 
+import androidx.annotation.Keep
+
+@Keep
 class ServerListBean(
     val hauls: String="",  //国家码
     val trails: String="Faster server", //国家名字

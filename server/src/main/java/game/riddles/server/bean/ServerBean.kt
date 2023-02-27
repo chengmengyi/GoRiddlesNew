@@ -1,8 +1,10 @@
 package game.riddles.server.bean
 
+import androidx.annotation.Keep
 import com.github.shadowsocks.database.Profile
 import com.github.shadowsocks.database.ProfileManager
 
+@Keep
 class ServerBean(
     val adjectives: String?="",
     val canal: String?="",
