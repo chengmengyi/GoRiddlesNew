@@ -67,4 +67,6 @@ fun Context.showNoNetDialog(){
     }
 }
 
+fun String.limitArea()=contains("IR")||contains("MO")||contains("HK")||contains("CN")
+
 

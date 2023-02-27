@@ -8,8 +8,8 @@ object AdShowed {
     private var click=0
     private var show=0
 
-    var maxClick=1
-    var maxShow=10
+    var maxClick=15
+    var maxShow=50
 
     var firstLoad=true
 
@@ -29,6 +29,8 @@ object AdShowed {
     fun setMax(click:Int,show:Int){
         maxClick =click
         maxShow =show
+        MMKV.defaultMMKV().encode("flash_max_click", maxClick)
+        MMKV.defaultMMKV().encode("flash_max_show", maxShow)
     }
 
     fun limit() = click >= maxClick || show >= maxShow

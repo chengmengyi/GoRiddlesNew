@@ -10,6 +10,7 @@ import android.view.View
 import android.view.animation.LinearInterpolator
 import androidx.appcompat.app.AlertDialog
 import androidx.core.animation.doOnEnd
+import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.SizeUtils
 import com.github.shadowsocks.utils.StartService
 import game.riddles.server.R
@@ -27,6 +28,7 @@ import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.layout_home_content.*
 import kotlinx.android.synthetic.main.layout_home_drawer.*
 import java.lang.Exception
+import java.lang.System.exit
 import kotlin.system.exitProcess
 
 class HomeAc: BaseAc(R.layout.activity_home), ConnectServer.IConnectCallback, ConnectTimeManager.ITimerCallback {
@@ -37,8 +39,8 @@ class HomeAc: BaseAc(R.layout.activity_home), ConnectServer.IConnectCallback, Co
     private val instance= SizeUtils.dp2px(91F)
     private var connectAnimator:ValueAnimator?=null
 
-//    private val showConnectAd by lazy { ShowFullAd(this, Local.CONNECT) }
-//    private val showHomeAd by lazy { ShowNativeAd(Local.HOME,this) }
+    private val showConnectAd by lazy { ShowFullAd(this, Local.CONNECT) }
+    private val showHomeAd by lazy { ShowNativeAd(Local.HOME,this) }
 
     private val registerResult=registerForActivityResult(StartService()) {
         if (!it && permission) {
@@ -158,28 +160,27 @@ class HomeAc: BaseAc(R.layout.activity_home), ConnectServer.IConnectCallback, Co
     private fun startConnectAnimator(connect:Boolean){
         this.connect=connect
         connectAnimator= ValueAnimator.ofInt(0, 100).apply {
-            duration=3000L
+            duration=10000L
             interpolator = LinearInterpolator()
             addUpdateListener {
                 val pro = it.animatedValue as Int
                 iv_connect_btn.translationY=getTranslationY(connect, pro)
-//                val duration = (10 * (pro / 100.0F)).toInt()
-//                if (duration in 2..9){
-//                    showConnectAd.show(
-//                        showing = {
-//                            stopConnectAnimator()
-//                            checkConnectResult(jump = false)
-//                            iv_connect_btn.translationY=getTranslationY(connect, 100)
-//                        },
-//                        close = {
-//                            checkConnectResult()
-//                        }
-//                    )
-//                }else if (duration>=10){
-//                    checkConnectResult()
-//                }
+                val duration = (10 * (pro / 100.0F)).toInt()
+                if (duration in 2..9){
+                    showConnectAd.show(
+                        showing = {
+                            stopConnectAnimator()
+                            checkConnectResult(jump = false)
+                            iv_connect_btn.translationY=getTranslationY(connect, 100)
+                        },
+                        close = {
+                            checkConnectResult()
+                        }
+                    )
+                }else if (duration>=10){
+                    checkConnectResult()
+                }
             }
-            doOnEnd { checkConnectResult() }
             start()
         }
     }
@@ -291,18 +292,18 @@ class HomeAc: BaseAc(R.layout.activity_home), ConnectServer.IConnectCallback, Co
                 setMessage("Due to policy reasons,this service is not available in your country")
                 setCancelable(false)
                 setPositiveButton("sure"
-                ) { p0, p1 -> exitProcess(0) }
+                ) { p0, p1 -> ActivityUtils.finishActivity(HomeAc::class.java) }
                 show()
             }
         }
     }
 
-//    override fun onResume() {
-//        super.onResume()
-//        if (!AdShowed.adShowed(Local.HOME)){
-//            showHomeAd.show(showDesc = false)
-//        }
-//    }
+    override fun onResume() {
+        super.onResume()
+        if (!AdShowed.adShowed(Local.HOME)){
+            showHomeAd.show(showDesc = false)
+        }
+    }
 
     override fun onBackPressed() {
         if(iv_guide.visibility==View.VISIBLE){
@@ -318,7 +319,7 @@ class HomeAc: BaseAc(R.layout.activity_home), ConnectServer.IConnectCallback, Co
         stopConnectAnimator()
         ConnectServer.onDestroy()
         ConnectTimeManager.setTimerCallback(null)
-//        showHomeAd.endShow()
+        showHomeAd.endShow()
         AdShowed.setShowed(Local.HOME,false)
     }
 }

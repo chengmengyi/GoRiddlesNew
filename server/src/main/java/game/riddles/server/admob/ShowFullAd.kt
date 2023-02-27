@@ -3,6 +3,7 @@ package game.riddles.server.admob
 import com.google.android.gms.ads.appopen.AppOpenAd
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import game.riddles.server.base.BaseAc
+import game.riddles.server.util.AdShowed
 import game.riddles.server.util.logGo
 
 class ShowFullAd(

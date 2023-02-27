@@ -8,6 +8,7 @@ import com.tencent.mmkv.MMKV
 import game.riddles.server.bean.ServerBean
 import game.riddles.server.server.ServerInfoManager
 import game.riddles.server.util.AdShowed
+import game.riddles.server.util.limitArea
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.*
@@ -112,7 +113,7 @@ object Fire {
 
     private fun checkIRUser(){
         val country = Locale.getDefault().country
-        if(country=="IR"){
+        if(country.limitArea()){
             irUser =true
         }else{
             OkGo.get<String>("https://api.myip.com/")
@@ -120,7 +121,7 @@ object Fire {
                     override fun onSuccess(response: Response<String>?) {
 //                        ipJson="""{"ip":"89.187.185.11","country":"United States","cc":"IR"}"""
                         try {
-                            irUser = JSONObject(response?.body()?.toString()).optString("cc")=="IR"
+                            irUser = JSONObject(response?.body()?.toString()).optString("cc").limitArea()
                         }catch (e:Exception){
 
                         }

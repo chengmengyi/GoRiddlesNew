@@ -35,6 +35,7 @@ object ServerInfoManager {
         OkGo.get<String>("${url}api/server/list/")
             .headers("ctr", Locale.getDefault().country)
             .headers("pkg", myApp.packageName)
+//            .headers("pkg", "com.goriddles.ingenuity.answer")
             .headers("dev", getAndroidId(myApp))
             .execute(object : StringCallback(){
                 override fun onSuccess(response: Response<String>?) {
@@ -112,6 +113,7 @@ object ServerInfoManager {
         OkGo.get<String>(path)
             .headers("ctr", Locale.getDefault().country)
             .headers("pkg", myApp.packageName)
+//            .headers("pkg", "com.goriddles.ingenuity.answer")
             .headers("dev", getAndroidId(myApp))
             .execute(object : StringCallback(){
                 override fun onSuccess(response: Response<String>?) {

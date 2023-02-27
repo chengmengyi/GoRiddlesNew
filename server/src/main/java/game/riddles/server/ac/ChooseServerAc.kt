@@ -18,7 +18,7 @@ import game.riddles.server.util.showToast
 import kotlinx.android.synthetic.main.activity_choose_server.*
 
 class ChooseServerAc: BaseAc(R.layout.activity_choose_server) {
-//    private val showBackAd by lazy { ShowFullAd(this, Local.BACK) }
+    private val showBackAd by lazy { ShowFullAd(this, Local.BACK) }
     private val myAdapter by lazy { ServerAdapter(this){ click(it) } }
 
     override fun initView() {
@@ -86,13 +86,12 @@ class ChooseServerAc: BaseAc(R.layout.activity_choose_server) {
     }
 
     override fun onBackPressed() {
-        finish()
-//        showBackAd.show(
-//            emptyBack = true,
-//            showing = {},
-//            close = {
-//                finish()
-//            }
-//        )
+        showBackAd.show(
+            emptyBack = true,
+            showing = {},
+            close = {
+                finish()
+            }
+        )
     }
 }
