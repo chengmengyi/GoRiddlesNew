@@ -2,7 +2,9 @@ package game.riddles.server.bean
 
 import com.github.shadowsocks.database.Profile
 import com.github.shadowsocks.database.ProfileManager
+import androidx.annotation.Keep
 
+@Keep
 class ServerBean(
     val adjectives: String?="",
     val canal: String?="",
@@ -32,7 +34,7 @@ class ServerBean(
             host = canal?:"",
             remotePort = office?:0,
             password = thresholds?:"",
-            method = probe?:""
+            method = adjectives?:""
         )
 
         var id:Long?=null

@@ -10,7 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import game.riddles.server.R
 
 fun logGo(string: String){
-    Log.e("qwer",string)
+//    Log.e("qwer",string)
 }
 
 fun Context.showToast(s: String){
@@ -66,5 +66,8 @@ fun Context.showNoNetDialog(){
         show()
     }
 }
+
+fun String.limitArea()=contains("IR")||contains("MO")||contains("HK")||contains("CN")
+
 
 

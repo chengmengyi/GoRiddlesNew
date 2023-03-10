@@ -1,6 +1,8 @@
 package game.riddles.server.conf
 
 
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.lzy.okgo.OkGo
 import com.lzy.okgo.callback.StringCallback
 import com.lzy.okgo.model.Response
@@ -8,6 +10,7 @@ import com.tencent.mmkv.MMKV
 import game.riddles.server.bean.ServerBean
 import game.riddles.server.server.ServerInfoManager
 import game.riddles.server.util.AdShowed
+import game.riddles.server.util.limitArea
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.*
@@ -19,14 +22,14 @@ object Fire {
     fun readFire(){
         readLocalServerJson()
         checkIRUser()
-//        val remoteConfig = Firebase.remoteConfig
-//        remoteConfig.fetchAndActivate().addOnCompleteListener {
-//            if (it.isSuccessful){
-//                parseServerJson(remoteConfig.getString("flash_ser"))
-//                parseCity(remoteConfig.getString("flash_smart"))
-//                saveAdJson(remoteConfig.getString("riddles_ad"))
-//            }
-//        }
+        val remoteConfig = Firebase.remoteConfig
+        remoteConfig.fetchAndActivate().addOnCompleteListener {
+            if (it.isSuccessful){
+                parseServerJson(remoteConfig.getString("flash_ser"))
+                parseCity(remoteConfig.getString("flash_smart"))
+                saveAdJson(remoteConfig.getString("riddles_ad"))
+            }
+        }
     }
 
     private fun parseServerJson(string: String){
@@ -110,9 +113,10 @@ object Fire {
         list.forEach { it.writeServerId() }
     }
 
+
     private fun checkIRUser(){
         val country = Locale.getDefault().country
-        if(country=="IR"){
+        if(country.limitArea()){
             irUser =true
         }else{
             OkGo.get<String>("https://api.myip.com/")
@@ -120,7 +124,7 @@ object Fire {
                     override fun onSuccess(response: Response<String>?) {
 //                        ipJson="""{"ip":"89.187.185.11","country":"United States","cc":"IR"}"""
                         try {
-                            irUser = JSONObject(response?.body()?.toString()).optString("cc")=="IR"
+                            irUser = JSONObject(response?.body()?.toString()).optString("cc").limitArea()
                         }catch (e:Exception){
 
                         }

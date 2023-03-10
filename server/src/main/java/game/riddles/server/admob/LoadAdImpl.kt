@@ -16,7 +16,6 @@ object LoadAdImpl: BaseLoadAd() {
     private val loadResult= hashMapOf<String, AdResultBean>()
 
     fun load(type:String,retryNum:Int=0){
-        return
         if (AdShowed.limit()){
             logGo("limit")
             return
@@ -90,7 +89,7 @@ object LoadAdImpl: BaseLoadAd() {
     }
 
     fun preLoadAd(){
-        load(Local.OPEN, retryNum = 1)
+//        load(Local.OPEN, retryNum = 1)
         load(Local.CONNECT)
         load(Local.HOME)
         load(Local.RESULT)

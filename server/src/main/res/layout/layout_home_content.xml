@@ -165,7 +165,12 @@
 <!--            app:layout_constraintBottom_toBottomOf="parent"-->
 <!--            app:layout_constraintTop_toBottomOf="@id/iv_choose_server"/>-->
     </androidx.constraintlayout.widget.ConstraintLayout>
-
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        layout="@layout/native_home"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@id/llc_bottom"/>
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/llc_bottom"
         android:layout_width="match_parent"

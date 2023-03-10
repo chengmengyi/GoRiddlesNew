@@ -37,8 +37,8 @@ class HomeAc: BaseAc(R.layout.activity_home), ConnectServer.IConnectCallback, Co
     private val instance= SizeUtils.dp2px(91F)
     private var connectAnimator:ValueAnimator?=null
 
-//    private val showConnectAd by lazy { ShowFullAd(this, Local.CONNECT) }
-//    private val showHomeAd by lazy { ShowNativeAd(Local.HOME,this) }
+    private val showConnectAd by lazy { ShowFullAd(this, Local.CONNECT) }
+    private val showHomeAd by lazy { ShowNativeAd(Local.HOME,this) }
 
     private val registerResult=registerForActivityResult(StartService()) {
         if (!it && permission) {
@@ -158,28 +158,27 @@ class HomeAc: BaseAc(R.layout.activity_home), ConnectServer.IConnectCallback, Co
     private fun startConnectAnimator(connect:Boolean){
         this.connect=connect
         connectAnimator= ValueAnimator.ofInt(0, 100).apply {
-            duration=3000L
+            duration=10000L
             interpolator = LinearInterpolator()
             addUpdateListener {
                 val pro = it.animatedValue as Int
                 iv_connect_btn.translationY=getTranslationY(connect, pro)
-//                val duration = (10 * (pro / 100.0F)).toInt()
-//                if (duration in 2..9){
-//                    showConnectAd.show(
-//                        showing = {
-//                            stopConnectAnimator()
-//                            checkConnectResult(jump = false)
-//                            iv_connect_btn.translationY=getTranslationY(connect, 100)
-//                        },
-//                        close = {
-//                            checkConnectResult()
-//                        }
-//                    )
-//                }else if (duration>=10){
-//                    checkConnectResult()
-//                }
+                val duration = (10 * (pro / 100.0F)).toInt()
+                if (duration in 2..9){
+                    showConnectAd.show(
+                        showing = {
+                            stopConnectAnimator()
+                            checkConnectResult(jump = false)
+                            iv_connect_btn.translationY=getTranslationY(connect, 100)
+                        },
+                        close = {
+                            checkConnectResult()
+                        }
+                    )
+                }else if (duration>=10){
+                    checkConnectResult()
+                }
             }
-            doOnEnd { checkConnectResult() }
             start()
         }
     }
@@ -297,12 +296,12 @@ class HomeAc: BaseAc(R.layout.activity_home), ConnectServer.IConnectCallback, Co
         }
     }
 
-//    override fun onResume() {
-//        super.onResume()
-//        if (!AdShowed.adShowed(Local.HOME)){
-//            showHomeAd.show(showDesc = false)
-//        }
-//    }
+    override fun onResume() {
+        super.onResume()
+        if (!AdShowed.adShowed(Local.HOME)){
+            showHomeAd.show(showDesc = false)
+        }
+    }
 
     override fun onBackPressed() {
         if(iv_guide.visibility==View.VISIBLE){
@@ -318,7 +317,7 @@ class HomeAc: BaseAc(R.layout.activity_home), ConnectServer.IConnectCallback, Co
         stopConnectAnimator()
         ConnectServer.onDestroy()
         ConnectTimeManager.setTimerCallback(null)
-//        showHomeAd.endShow()
+        showHomeAd.endShow()
         AdShowed.setShowed(Local.HOME,false)
     }
 }

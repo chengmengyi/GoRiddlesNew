@@ -3,13 +3,15 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
     compileSdk rootProject.ext.android.compileSdk
 
     defaultConfig {
-        applicationId "game.riddles"
+        applicationId "com.goriddles.ingenuity.answer"
         minSdk rootProject.ext.android.minSdk
         targetSdk rootProject.ext.android.targetSdk
         versionCode rootProject.ext.android.versionCode
@@ -44,4 +46,8 @@ dependencies {
     implementation project(":browser")
     implementation project(":ad")
     implementation project(":server")
+    implementation platform('com.google.firebase:firebase-bom:29.3.1')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.facebook.android:facebook-android-sdk:12.3.0'
 }

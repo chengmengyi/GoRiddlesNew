@@ -7,7 +7,7 @@ object Local {
 
 
     const val OPEN="enterid_open"
-    const val CONNECT="enterid_reward"
+    const val CONNECT="enterid_reward2"
     const val HOME="enterid_home"
     const val RESULT="enterid_result"
     const val BACK="enterid_time"
@@ -15,20 +15,12 @@ object Local {
 
     const val SERVER_LIST="""[
   {
-    "thresholds": "123456",
+    "thresholds": "9OuPVw#UBajyyzM",
     "probe": "chacha20-ietf-poly1305",
-    "office": 100,
-    "map": "Japan",
-    "volts": "Tokyo",
-    "canal": "100.223.52.0"
-  },
-   {
-    "thresholds": "123456",
-    "probe": "chacha20-ietf-poly1305",
-    "office": 100,
-    "map": "United States",
-    "volts": "newyork",
-    "canal": "100.223.52.1"
+    "office": 5691,
+    "map": "Austria",
+    "volts": "Vienna1",
+    "canal": "158.255.212.246"
   }
 ]"""
 
@@ -66,7 +58,7 @@ object Local {
             "index": 2
         }
     ],
-     "enterid_reward": [
+     "enterid_reward2": [
         {
             "from": "admob",
             "data_id": "ca-app-pub-3940256099942544/8691691433",

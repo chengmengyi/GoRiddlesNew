@@ -9,7 +9,7 @@ object HttpUtils {
     @JvmStatic
     fun retrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://rejoiceyah-c9239ab53e124c97.elb.us-east-1.amazonaws.com/")
+            .baseUrl("https://photo.goriddles.net/")
             .client(
                 OkHttpClient
                     .Builder()

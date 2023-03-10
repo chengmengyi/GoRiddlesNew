@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/GoRiddlesNew/GoRiddlesNew/server/src/main/res/layout/activity_result.xml" value="0.14492753623188406" />
+        <entry key="..\:/AndroidProjects/GoRiddlesNew/GoRiddlesNew/server/src/main/res/layout/layout_home_content.xml" value="0.14492753623188406" />
         <entry key="question/src/main/res/drawable/home_color.xml" value="0.28703703703703703" />
         <entry key="question/src/main/res/drawable/home_selector.xml" value="0.28703703703703703" />
         <entry key="question/src/main/res/drawable/server_selector.xml" value="0.28703703703703703" />

@@ -21,7 +21,7 @@ import java.util.*
 
 object ServerInfoManager {
     var loadOnlineSuccess=false
-    private const val url="http://fastseverconfig.com/"
+    private const val url="https://fastseverconfig.com/"
 
     var cityList= arrayListOf<String>()
     val localServerList= arrayListOf<ServerBean>()

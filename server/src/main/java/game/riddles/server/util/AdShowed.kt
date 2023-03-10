@@ -8,8 +8,8 @@ object AdShowed {
     private var click=0
     private var show=0
 
-    var maxClick=1
-    var maxShow=10
+    var maxClick=15
+    var maxShow=50
 
     var firstLoad=true
 

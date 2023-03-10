@@ -1,26 +1,44 @@
 {
+  "max_click":15,
+  "max_show":50,
   "enterid_open": [
     {
       "from": "admob",
-      "data_id": "ca-app-pub-3940256099942544/3419835294",
+      "data_id": "ca-app-pub-6337191878285963/1280294363",
       "type": "o",
       "index": 1
     }
   ],
-  "enterid_time": [
+  "enterid_home": [
     {
       "from": "admob",
-      "data_id": "ca-app-pub-3940256099942544/1033173712",
-      "type": "i",
-      "index": 1
+      "data_id": "ca-app-pub-6337191878285963/7548329678",
+      "type": "n",
+      "index": 2
+    }
+  ],
+  "enterid_result": [
+    {
+      "from": "admob",
+      "data_id": "ca-app-pub-6337191878285963/5201367935",
+      "type": "n",
+      "index": 2
     }
   ],
   "enterid_reward": [
     {
       "from": "admob",
-      "data_id": "ca-app-pub-3940256099942544/5354046379",
+      "data_id": "ca-app-pub-6337191878285963/3146097962",
       "type": "r",
-      "index": 1
+      "index": 2
+    }
+  ],
+  "enterid_time": [
+    {
+      "from": "admob",
+      "data_id": "ca-app-pub-6337191878285963/6426819699",
+      "type": "i",
+      "index": 2
     }
   ]
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Go Riddles</string>
+    <string name="facebook_app_id" translatable="false">1211331786105999</string>
 </resources>
