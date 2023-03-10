@@ -37,13 +37,11 @@ object ConnectServer: ShadowsocksConnection.Callback {
             GlobalScope.launch {
                 delay(500L)
                 DataStore.profileId = fastServer.getServerId()
-                logGo("=currentServer.isFast()===connect===${fastServer.getServerId()}=")
                 Core.startService()
             }
         }else{
             GlobalScope.launch {
                 DataStore.profileId = currentServer.getServerId()
-                logGo("=chooseserver===connect=====${currentServer.getServerId()}")
                 Core.startService()
             }
         }

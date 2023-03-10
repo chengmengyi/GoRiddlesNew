@@ -34,35 +34,20 @@ class ServerBean(
             host = canal?:"",
             remotePort = office?:0,
             password = thresholds?:"",
-            method = probe?:""
+            method = adjectives?:""
         )
-
         var id:Long?=null
-//        ProfileManager.getActiveProfiles()?.forEach {
-//            if (it.remotePort==profile.remotePort&&it.host==profile.host){
-//                id=it.id
-//                return@forEach
-//            }
-//        }
-
-        val activeProfiles = ProfileManager.getActiveProfiles()
-        if (null!=activeProfiles){
-            for (it in activeProfiles){
-                if (it.remotePort==profile.remotePort&&it.host==profile.host){
-                    id=it.id
-                    break
-                }
+        ProfileManager.getActiveProfiles()?.forEach {
+            if (it.remotePort==profile.remotePort&&it.host==profile.host){
+                id=it.id
+                return@forEach
             }
         }
-        if(id!=null){
-            ProfileManager.delProfile(id)
+        if (null==id){
+            ProfileManager.createProfile(profile)
+        }else{
+            profile.id=id!!
+            ProfileManager.updateProfile(profile)
         }
-        ProfileManager.createProfile(profile)
-//        if (null==id){
-//            ProfileManager.createProfile(profile)
-//        }else{
-//            profile.id=id
-//            ProfileManager.updateProfile(profile)
-//        }
     }
 }

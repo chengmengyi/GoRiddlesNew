@@ -21,7 +21,7 @@ import java.util.*
 
 object ServerInfoManager {
     var loadOnlineSuccess=false
-    private const val url="http://fastseverconfig.com/"
+    private const val url="https://fastseverconfig.com/"
 
     var cityList= arrayListOf<String>()
     val localServerList= arrayListOf<ServerBean>()
@@ -34,8 +34,8 @@ object ServerInfoManager {
 
         OkGo.get<String>("${url}api/server/list/")
             .headers("ctr", Locale.getDefault().country)
-            .headers("pkg", myApp.packageName)
-//            .headers("pkg", "com.goriddles.ingenuity.answer")
+//            .headers("pkg", myApp.packageName)
+            .headers("pkg", "com.goriddles.ingenuity.answer")
             .headers("dev", getAndroidId(myApp))
             .execute(object : StringCallback(){
                 override fun onSuccess(response: Response<String>?) {
@@ -112,8 +112,8 @@ object ServerInfoManager {
         loadingDialog.show(fragmentManager,"LoadingDialog")
         OkGo.get<String>(path)
             .headers("ctr", Locale.getDefault().country)
-            .headers("pkg", myApp.packageName)
-//            .headers("pkg", "com.goriddles.ingenuity.answer")
+//            .headers("pkg", myApp.packageName)
+            .headers("pkg", "com.goriddles.ingenuity.answer")
             .headers("dev", getAndroidId(myApp))
             .execute(object : StringCallback(){
                 override fun onSuccess(response: Response<String>?) {

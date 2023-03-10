@@ -7,8 +7,12 @@ import androidx.annotation.Keep
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
 import com.blankj.utilcode.util.*
+import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import game.riddles.core.utils.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import org.json.JSONObject
 import java.io.Serializable
 import java.util.*
@@ -21,6 +25,24 @@ internal class TFields private constructor(private val context: Context) {
 
         fun forInstall(context: Context, accept: (fields: JSONObject) -> Unit) {
             TFields(context).forInstall(accept)
+        }
+
+        fun forAdEvent(
+            context: Context,
+            valueMicros:Long,
+            currencyCode:String,
+            mediationAdapterClassName:String,
+            adID:String,
+            adLocation:String,
+            adType:String,
+            precisionType:String,
+            loadIp:String,
+            showIp:String,
+            loadCity:String,
+            showCity:String,
+            callback: (json: JSONObject) -> Unit
+            ){
+            TFields(context).forAdEvent(valueMicros, currencyCode, mediationAdapterClassName, adID, adLocation, adType, precisionType, loadIp, showIp, loadCity, showCity,callback)
         }
 
         private var googleReferrerCopyJson by CacheableStringDelegate { "GOOGLE_REFERRER" }
@@ -44,36 +66,97 @@ internal class TFields private constructor(private val context: Context) {
         val instant: Boolean
     ) : Serializable
 
+    private fun forAdEvent(
+        valueMicros:Long,
+        currencyCode:String,
+        mediationAdapterClassName:String,
+        adID:String,
+        adLocation:String,
+        adType:String,
+        precisionType:String,
+        loadIp:String,
+        showIp:String,
+        loadCity:String,
+        showCity:String,
+        callback:(json:JSONObject)->Unit
+        ){
+        GlobalScope.launch(Dispatchers.IO) {
+            forCommon {
+                val jsonObject = JSONObject()
+                jsonObject.put("depart",valueMicros)
+                jsonObject.put("solar",currencyCode)
+                jsonObject.put("billion",getAdNetWork(mediationAdapterClassName))
+                jsonObject.put("rumpus","admob")
+                jsonObject.put("hardtack",adID)
+                jsonObject.put("smooth",adLocation)
+                jsonObject.put("slump","")
+                jsonObject.put("glucose",getAdType(adType))
+                jsonObject.put("sienna",precisionType)
+                jsonObject.put("packard",loadIp)
+                jsonObject.put("stumpy",showIp)
+
+                val ruse = JSONObject()
+                ruse.put("flash_request_city",loadCity)
+                ruse.put("flash_show_city",showCity)
+                it.put("zest",jsonObject)
+                it.put("ruse",ruse)
+                callback.invoke(it)
+            }
+        }
+    }
+
+
+    private fun getAdType(adType: String):String{
+        when(adType){
+            "o"->return "open"
+            "i"->return "Interstitial"
+            "n"->return "native"
+        }
+        return ""
+    }
+
+    private fun getAdNetWork(string: String):String{
+        if(string.contains("facebook")) return "facebook"
+        else if(string.contains("admob")) return "admob"
+        return ""
+    }
+
     private fun forSession(accept: (fields: JSONObject) -> Unit) {
-        forCommon {
-            it.put("diet", "muenster")
-            accept(it)
+        GlobalScope.launch(Dispatchers.IO) {
+            forCommon {
+                it.put("diet", "muenster")
+                accept(it)
+            }
         }
     }
 
     private fun forInstall(accept: (fields: JSONObject) -> Unit) {
-        forCommon { common ->
-            getGoogleReferrer {
-                accept(
-                    common.put(
-                        "jesus", JSONObject()
-                            .put("dovekie", "build/${Build.VERSION.RELEASE}")
-                            .put("drum", it.referrer)
-                            .put("parcel", it.version)
-                            .put("lymph", WebSettings.getDefaultUserAgent(context))
-                            .put("diadem", if (isGoogleAdsTrackLimited) "park" else "deathbed")
-                            .put("fantasia", it.clickClientTimestamp)
-                            .put("sickle", it.beginClientTimestamp)
-                            .put("commune", it.clickServerTimestamp)
-                            .put("cometh", it.beginServerTimestamp)
-                            .put("olefin", context.firstInstallTime())
-                            .put("ocelot", context.lastUpdateTime())
-                            .put("boutique", it.instant)
+        GlobalScope.launch(Dispatchers.IO) {
+            forCommon { common ->
+                getGoogleReferrer {
+                    accept(
+                        common.put(
+                            "jesus", JSONObject()
+                                .put("dovekie", "build/${Build.VERSION.RELEASE}")
+                                .put("drum", it.referrer)
+                                .put("parcel", it.version)
+                                .put("lymph", WebSettings.getDefaultUserAgent(context))
+                                .put("diadem", if (isGoogleAdsTrackLimited) "park" else "deathbed")
+                                .put("fantasia", it.clickClientTimestamp)
+                                .put("sickle", it.beginClientTimestamp)
+                                .put("commune", it.clickServerTimestamp)
+                                .put("cometh", it.beginServerTimestamp)
+                                .put("olefin", context.firstInstallTime())
+                                .put("ocelot", context.lastUpdateTime())
+                                .put("boutique", it.instant)
+                        )
                     )
-                )
+                }
             }
         }
     }
+
+
 
     private fun getGoogleReferrer(accept: (referrer: GoogleReferrerCopy) -> Unit) {
         val fromCache = googleReferrerCopyJson.toSerializableByJson<GoogleReferrerCopy>()
@@ -109,7 +192,7 @@ internal class TFields private constructor(private val context: Context) {
         }
     }
 
-    private fun forCommon(accept: (fields: JSONObject) -> Unit) {
+    private suspend fun forCommon(accept: (fields: JSONObject) -> Unit) {
         accept(
             JSONObject()
                 .put(

@@ -33,6 +33,10 @@ internal class AdmobOpenAd : IOpenAd {
                 }
 
                 override fun onAdLoaded(appOpenAd: AppOpenAd) {
+                    TransAdEvent.setLoadAdIpCityName(scene)
+                    appOpenAd.setOnPaidEventListener {
+                        TransAdEvent.transAdEvent(context,it,appOpenAd.responseInfo,data,scene)
+                    }
                     callback(appOpenAd)
                 }
             })

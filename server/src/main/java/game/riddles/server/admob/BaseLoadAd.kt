@@ -1,13 +1,12 @@
 package game.riddles.server.admob
 
-import com.google.android.gms.ads.AdListener
-import com.google.android.gms.ads.AdLoader
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.*
 import com.google.android.gms.ads.appopen.AppOpenAd
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.android.gms.ads.nativead.NativeAdOptions
+import game.riddles.core.event.TEvent
+import game.riddles.server.ServerApi
 import game.riddles.server.bean.AdBean
 import game.riddles.server.bean.AdResultBean
 import game.riddles.server.myApp
@@ -15,6 +14,8 @@ import game.riddles.server.util.AdShowed
 import game.riddles.server.util.logGo
 
 abstract class BaseLoadAd {
+    val loadAdIpMap= hashMapOf<String,String>()
+    val loadAdCityMap= hashMapOf<String,String?>()
 
     protected fun loadAdByType(
         type: String,
@@ -38,6 +39,10 @@ abstract class BaseLoadAd {
             object : AppOpenAd.AppOpenAdLoadCallback() {
                 override fun onAdLoaded(p0: AppOpenAd) {
                     logGo("load $type ad success")
+                    setLoadAdIpCityName(type)
+                    p0.setOnPaidEventListener {
+                        transAdEvent(it,p0.responseInfo,adBean,type)
+                    }
                     callback.invoke(AdResultBean(System.currentTimeMillis(), p0))
                 }
 
@@ -67,6 +72,10 @@ abstract class BaseLoadAd {
 
                 override fun onAdLoaded(p0: InterstitialAd) {
                     logGo("load $type ad success")
+                    setLoadAdIpCityName(type)
+                    p0.setOnPaidEventListener {
+                        transAdEvent(it,p0.responseInfo,adBean,type)
+                    }
                     callback.invoke(AdResultBean(System.currentTimeMillis(), p0))
                 }
             }
@@ -81,9 +90,13 @@ abstract class BaseLoadAd {
         AdLoader.Builder(
             myApp,
             adBean.data_id,
-        ).forNativeAd {
+        ).forNativeAd { p0->
             logGo("load $type ad success")
-            callback.invoke(AdResultBean(System.currentTimeMillis(), it))
+            setLoadAdIpCityName(type)
+            p0.setOnPaidEventListener {
+                transAdEvent(it,p0.responseInfo,adBean,type)
+            }
+            callback.invoke(AdResultBean(System.currentTimeMillis(), p0))
         }
             .withAdListener(object : AdListener() {
                 override fun onAdFailedToLoad(p0: LoadAdError) {
@@ -94,6 +107,7 @@ abstract class BaseLoadAd {
 
                 override fun onAdClicked() {
                     super.onAdClicked()
+
                     AdShowed.addClick()
                 }
             })
@@ -106,6 +120,28 @@ abstract class BaseLoadAd {
             )
             .build()
             .loadAd(AdRequest.Builder().build())
+    }
+
+
+    private fun transAdEvent(adValue: AdValue, responseInfo: ResponseInfo?, adBean: AdBean,type: String){
+        TEvent(myApp).transAdEvent(
+            adValue.valueMicros,
+            adValue.currencyCode,
+            responseInfo?.mediationAdapterClassName?:"",
+            adBean.data_id,
+            type,
+            adBean.type,
+            adValue.precisionType.toString(),
+            loadAdIpMap[type]?:"",
+            ServerApi.getCurrentIp()?:"null",
+            loadAdCityMap[type]?:"null",
+            ServerApi.getCurrentCityName()?:"null"
+        )
+    }
+
+    private fun setLoadAdIpCityName(type: String){
+        loadAdIpMap[type]=ServerApi.getCurrentIp()?:""
+        loadAdCityMap[type]=ServerApi.getCurrentCityName()
     }
 
 }

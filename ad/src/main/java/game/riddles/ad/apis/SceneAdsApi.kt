@@ -12,6 +12,8 @@ import game.riddles.ad.utils.result
 import game.riddles.ad.utils.show
 
 object SceneAdsApi {
+
+
     internal lateinit var funProxy: IAdFunProxy
         private set
 

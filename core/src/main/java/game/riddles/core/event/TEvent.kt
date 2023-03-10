@@ -1,6 +1,7 @@
 package game.riddles.core.event
 
 import android.content.Context
+import android.util.Log
 import game.riddles.core.ApiServer
 import game.riddles.core.net.HttpUtils
 import game.riddles.core.utils.CacheableBooleanDelegate
@@ -14,7 +15,7 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
 
-internal class TEvent(private val context: Context) {
+class TEvent(private val context: Context) {
     companion object {
         private var installEventUploaded by CacheableBooleanDelegate { "INSTALL_EVENT_UPLOADED" }
     }
@@ -31,6 +32,7 @@ internal class TEvent(private val context: Context) {
         onSuccess: (() -> Unit)? = null,
         onFailure: (() -> Unit)? = null
     ) {
+        printLog("=transEvent=$eventName==params==${body.toString()}","Event")
         GlobalScope.launch(Dispatchers.IO) {
             val res = runCatching {
                 HttpUtils.retrofit().create(ApiServer.IEvent::class.java)
@@ -41,10 +43,12 @@ internal class TEvent(private val context: Context) {
             }
                 .getOrNull()
             if (res != null) {
-                printLog("response[$eventName]: ${res.toJson()}", "Event")
+                printLog("transEvent $eventName success","Event")
+//                printLog("response[$eventName]: ${res.toJson()}", "Event")
                 onSuccess?.invoke()
             } else {
-                printLog("response[$eventName]: error", "Event")
+                printLog("transEvent $eventName fail","Event")
+//                printLog("response[$eventName]: error", "Event")
                 onFailure?.invoke()
             }
         }
@@ -57,5 +61,37 @@ internal class TEvent(private val context: Context) {
                 installEventUploaded = true
             })
         }
+    }
+
+    fun transAdEvent(
+        valueMicros:Long,
+        currencyCode:String,
+        mediationAdapterClassName:String,
+        adID:String,
+        adLocation:String,
+        adType:String,
+        precisionType:String,
+        loadIp:String,
+        showIp:String,
+        loadCity:String,
+        showCity:String
+    ){
+        TFields.forAdEvent(
+            context,
+            valueMicros,
+            currencyCode,
+            mediationAdapterClassName,
+            adID,
+            adLocation,
+            adType,
+            precisionType,
+            loadIp,
+            showIp,
+            loadCity,
+            showCity,
+            callback = {
+                transEvent("ad_event", it)
+            }
+        )
     }
 }

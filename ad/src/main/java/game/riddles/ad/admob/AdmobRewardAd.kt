@@ -25,6 +25,10 @@ internal class AdmobRewardAd : IRewardAd {
             data.dataId,
             AdRequest.Builder().build(), object : RewardedInterstitialAdLoadCallback() {
                 override fun onAdLoaded(ad: RewardedInterstitialAd) {
+                    TransAdEvent.setLoadAdIpCityName(scene)
+                    ad.setOnPaidEventListener {
+                        TransAdEvent.transAdEvent(context,it,ad.responseInfo,data,scene)
+                    }
                     callback(ad)
                 }
 

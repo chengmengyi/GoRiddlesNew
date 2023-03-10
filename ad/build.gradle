@@ -39,6 +39,7 @@ android {
 
 dependencies {
     implementation project(":core")
+    implementation project(":server")
     implementation rootProject.ext.dependencies.admobAd
     implementation rootProject.ext.dependencies.moshi
     kapt rootProject.ext.dependencies.moshiCodegen

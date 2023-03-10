@@ -31,6 +31,10 @@ internal class AdmobInterAd : IInterAd {
                 }
 
                 override fun onAdLoaded(interstitialAd: InterstitialAd) {
+                    TransAdEvent.setLoadAdIpCityName(scene)
+                    interstitialAd.setOnPaidEventListener {
+                        TransAdEvent.transAdEvent(context,it,interstitialAd.responseInfo,data,scene)
+                    }
                     callback(interstitialAd)
                 }
             }

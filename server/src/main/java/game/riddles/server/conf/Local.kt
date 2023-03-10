@@ -7,7 +7,7 @@ object Local {
 
 
     const val OPEN="enterid_open"
-    const val CONNECT="enterid_reward"
+    const val CONNECT="enterid_reward2"
     const val HOME="enterid_home"
     const val RESULT="enterid_result"
     const val BACK="enterid_time"
@@ -66,7 +66,7 @@ object Local {
             "index": 2
         }
     ],
-     "enterid_reward": [
+     "enterid_reward2": [
         {
             "from": "admob",
             "data_id": "ca-app-pub-3940256099942544/8691691433",
